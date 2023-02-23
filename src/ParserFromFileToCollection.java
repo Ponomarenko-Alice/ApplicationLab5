@@ -12,7 +12,7 @@ public class ParserFromFileToCollection {
         while (sc.hasNextLine()) {
             String[] data = sc.nextLine().split(";");
             for (String x: data) {
-                // fill collection
+                // filling collection
                 System.out.println(x);
             }
         }
