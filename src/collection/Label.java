@@ -16,7 +16,6 @@ public class Label {
         this.name = name;
         return this.name;
     }
-
     public int getBands() {
         return this.bands;
     }

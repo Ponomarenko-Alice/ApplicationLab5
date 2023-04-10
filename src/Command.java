@@ -1,7 +1,9 @@
-import java.io.IOException;
-import java.util.Scanner;
+public abstract class Command {
+    public void execute() {
 
-public interface Command {
-    Scanner execute() throws IOException;
+    }
+    String descr() {
+        return null;
+    }
 
 }

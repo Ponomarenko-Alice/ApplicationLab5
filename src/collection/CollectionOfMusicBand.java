@@ -1,5 +1,10 @@
 package collection;
 
+import java.util.LinkedHashMap;
+
 public class CollectionOfMusicBand {
-    public CollectionOfMusicBand<Integer, Card>(Integer number, Card card);
+    LinkedHashMap<Integer, Card> collectionOfCards = new LinkedHashMap<>();
+    public void put(Integer integer, Card card) {
+        collectionOfCards.put(integer, card);
+    }
 }

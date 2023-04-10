@@ -1,6 +1,16 @@
 package collection;
 
-import java.time.LocalDate;
-
 public class Card {
-    public Card();
+    MusicBand musicBand;
+    Coordinates coordinates;
+    Label label;
+    MusicGenre musicGenre;
+    public Card(MusicBand musicBand, Coordinates  coordinates, Label label, MusicGenre musicGenre) {
+        this.musicBand = musicBand;
+        this.coordinates = coordinates;
+        this.label = label;
+        this.musicGenre = musicGenre;
+    }
+
+
+}

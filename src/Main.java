@@ -1,9 +1,16 @@
 import java.io.IOException;
 
+/**
+ * method start(in, collection)
+ */
+
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         System.out.println("jfjfjfjfj");
-        ParserFromFileToCollection p = new ParserFromFileToCollection(new Reader("collection.csv"));
-        p.execute();
+
+        Invoker i = new Invoker();
+
+        System.out.println(i.p());
+
     }
 }
