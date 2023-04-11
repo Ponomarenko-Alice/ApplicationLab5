@@ -10,8 +10,7 @@ public class InfoCommand extends Command {
 
     @Override
     public void execute() {
-        invoker.p();
-        for(Map.Entry<String, Command> set : invoker.p().entrySet()) {
+        for(Map.Entry<String, Command> set : invoker.getCommandSet().entrySet()) {
             System.out.println(set.getValue().getDescription());
         }
     }
