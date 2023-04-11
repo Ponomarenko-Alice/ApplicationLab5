@@ -1,9 +1,23 @@
-public abstract class Command {
-    public void execute() {
 
+
+public abstract class Command {
+    protected String name;
+    protected String description;
+
+    public Command(String name, String description) {
+        this.name = name;
+        this.description = description;
     }
-    String descr() {
-        return null;
+
+    public String getDescription() {
+        return this.toString();
+    }
+
+    public String toString() {
+        return "Command" + name + description;
+    }
+
+    public void execute() {
     }
 
 }

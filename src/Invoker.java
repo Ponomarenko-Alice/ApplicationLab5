@@ -1,30 +1,14 @@
 import java.util.LinkedHashMap;
-import java.util.Map;
 
 public class Invoker {
-    private int d;
-
-    public void d1() {
-    }
-
-    Invoker() {
-        System.out.println("constr");
-    }
-
-    {
-        System.out.print("");
-    }
-
 
     public LinkedHashMap<String, Command> p() {
-        HelpCommand hc = new HelpCommand();
         LinkedHashMap<String, Command> commands = new LinkedHashMap<>();
-        commands.put("help", hc);
+        commands.put("help", new HelpCommand(" help ","shows help for available commands." ));
+        commands.put("info", new InfoCommand(" info ", "gets information about the type of collection."));
 
         return commands;
 
-
     }
-
 
 }
