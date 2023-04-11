@@ -1,17 +1,21 @@
 
-import java.util.Map;
+import collection.CollectionOfMusicBand;
+
 
 public class InfoCommand extends Command {
     public InfoCommand(String name, String description) {
         super(name, description);
     }
-    Invoker invoker = new Invoker();
-
+    CollectionOfMusicBand collectionOfMusicBand = new CollectionOfMusicBand();
 
     @Override
     public void execute() {
-        for(Map.Entry<String, Command> set : invoker.getCommandSet().entrySet()) {
-            System.out.println(set.getValue().getDescription());
-        }
+        System.out.println("-INFORMATION ABOUT COLLECTION-");
+        System.out.println("Type of collection: " + collectionOfMusicBand.getName());
+        System.out.println("Date of initialization : " + "----");
+        System.out.println("Number of card : " + collectionOfMusicBand.getNumberOfCardsOfCards());
+
     }
+
+
 }

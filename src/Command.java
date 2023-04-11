@@ -14,7 +14,7 @@ public abstract class Command {
     }
 
     public String toString() {
-        return "Command" + name + description;
+        return "Command " + "'" + name + "'" + description;
     }
 
     public void execute() {
