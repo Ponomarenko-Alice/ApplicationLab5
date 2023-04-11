@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Refactoring Command and InfoCommand classes">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Rename Invoker method">
+      <change afterPath="$PROJECT_DIR$/src/TestReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InfoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Invoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Invoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApplicationLab5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationLab5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collection/CollectionOfMusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/collection/CollectionOfMusicBand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,17 +37,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alicc/IdeaProjects/ApplicationLab5/src&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/alicc/Downloads/super-csv-2.4.0.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alicc\IdeaProjects\ApplicationLab5\src" />
@@ -79,7 +83,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681191615768</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Rename Invoker method">
+      <created>1681210555425</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681210555425</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Rename Invoker method">
+      <created>1681210577795</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681210577795</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,6 +115,7 @@
     <MESSAGE value="Added classes for storing collection" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Refactoring Command and InfoCommand classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring Command and InfoCommand classes" />
+    <MESSAGE value="Rename Invoker method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename Invoker method" />
   </component>
 </project>
