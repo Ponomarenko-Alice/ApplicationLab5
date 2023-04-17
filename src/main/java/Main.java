@@ -13,6 +13,7 @@ public class Main {
             try (BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream)) {
                 CsvToBean<Card> cb = new CsvToBeanBuilder<Card>(new BufferedReader(new InputStreamReader(bufferedInputStream)))
                         .withType(Card.class)
+                        .withSeparator(';')
                         .withIgnoreLeadingWhiteSpace(true)
                         .build();
                 //HashMap<String, Card> hashMap = new LinkedHashMap<String, Card>();
