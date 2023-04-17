@@ -1,20 +1,28 @@
 package collection;
 
-import collection.Coordinates;
 
 import java.time.LocalDate;
 
 public class MusicBand {
+
     private Long id;
+
     private String name;
+
     private Coordinates coordinates;
+
     private LocalDate creationDate;
+
     private Long numberOfParticipants;
+
     private int singlesCount;
+
     private Integer albumsCount;
+
     private MusicGenre genre;
     private Label label;
 
+//    public MusicBand() {}
     public MusicBand(Long id, String name, Coordinates coordinates,
                      LocalDate creationDate, Long numberOfParticipants, int singlesCount,
                      Integer albumsCount, MusicGenre genre, Label label) {

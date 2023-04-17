@@ -1,7 +1,11 @@
 package collection;
 
+
+
 public class Coordinates {
+
     private Double x;
+
     private int y;
 
     public Coordinates( Double x, int y) {

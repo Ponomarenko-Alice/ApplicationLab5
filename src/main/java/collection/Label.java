@@ -1,7 +1,10 @@
 package collection;
 
+
 public class Label {
+
     private String name;
+
     private int bands;
 
     public Label(String name, int bands) {
