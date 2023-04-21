@@ -13,11 +13,13 @@ public class Main {
             try (BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream)) {
                 CsvToBean<Card> cb = new CsvToBeanBuilder<Card>(new BufferedReader(new InputStreamReader(bufferedInputStream)))
                         .withType(Card.class)
+                        .withSeparator(';')
                         .withIgnoreLeadingWhiteSpace(true)
                         .build();
                 //HashMap<String, Card> hashMap = new LinkedHashMap<String, Card>();
                 List<Card> list = cb.parse();
                 for (Card card : list) {
+
                     System.out.println("ID: " + card.getId());
                     System.out.println("name: " + card.getName());
                     System.out.println("surname: " + card.getSurname());

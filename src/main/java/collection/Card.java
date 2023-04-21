@@ -4,7 +4,7 @@ import com.opencsv.bean.CsvBindByPosition;
 
 public class Card {
     @CsvBindByPosition(position = 0)
-    private String id;
+    private Integer id;
 
     @CsvBindByPosition(position = 1)
     private String name;
@@ -12,14 +12,17 @@ public class Card {
     @CsvBindByPosition(position = 2)
     private String surname;
 
-    public Card() {}
+    public Card() {
+    }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
+
     public String getName() {
         return name;
     }
+
     public String getSurname() {
         return surname;
     }
@@ -29,7 +32,8 @@ public class Card {
     Coordinates coordinates;
     Label label;
     MusicGenre musicGenre;
-    public Card(MusicBand musicBand, Coordinates  coordinates, Label label, MusicGenre musicGenre) {
+
+    public Card(MusicBand musicBand, Coordinates coordinates, Label label, MusicGenre musicGenre) {
         this.musicBand = musicBand;
         this.coordinates = coordinates;
         this.label = label;

@@ -4,28 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Attempt to create Executor">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Executor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="-">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApplicationLab5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationLab5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection.csv" beforeDir="false" afterPath="$PROJECT_DIR$/collection.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CommandCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommandCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Executor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InfoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Invoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Invoker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collection/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collection/CollectionOfMusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/CollectionOfMusicBand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collection/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/Coordinates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collection/Label.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/Label.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collection/MusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collection/MusicGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/MusicGenre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collection/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/collection/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/collection/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/collection/Label.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/collection/Label.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/collection/MusicBand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/collection/MusicBand.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681239216837</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="-">
+      <created>1681749258512</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681749258512</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,7 +176,8 @@
     <MESSAGE value="Refactoring HelpCommand and CollectionOfMusicBand&#10;-added method to CollectionOfMusicBand&#10;-added realization to HelpCommand" />
     <MESSAGE value="Refactoring HelpCommand and InfoCommand classes&#10;-realisation of HelpCommand and InfoCommand classes&#10;-added methods to CollectionOfMusicBand class" />
     <MESSAGE value="Attempt to create Executor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Attempt to create Executor" />
+    <MESSAGE value="-" />
+    <option name="LAST_COMMIT_MESSAGE" value="-" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -192,7 +186,25 @@
           <properties class="java.lang.ClassNotFoundException" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="java-exception" />
+      </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((InterruptedException)InterruptedException1330_DebugLabel).stackTrace" custom="java.lang.InterruptedException" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
