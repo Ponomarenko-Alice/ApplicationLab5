@@ -1,21 +1,20 @@
 package collection;
 
-import com.opencsv.bean.CsvBindByPosition;
 
 public class Card {
-    @CsvBindByPosition(position = 0)
-    private Integer id;
+//    @CsvBindByPosition(position = 0)
+    private int id;
 
-    @CsvBindByPosition(position = 1)
+//    @CsvBindByPosition(position = 1)
     private String name;
 
-    @CsvBindByPosition(position = 2)
+//    @CsvBindByPosition(position = 2)
     private String surname;
 
     public Card() {
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 

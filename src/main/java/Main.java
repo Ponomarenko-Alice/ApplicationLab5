@@ -1,4 +1,5 @@
-import collection.Card;
+
+import collection.MusicBand;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 
@@ -11,24 +12,20 @@ public class Main {
             FileInputStream fileInputStream = new FileInputStream("C:\\Users\\alicc\\IdeaProjects\\ApplicationLab5\\collection.csv");
 
             try (BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream)) {
-                CsvToBean<Card> cb = new CsvToBeanBuilder<Card>(new BufferedReader(new InputStreamReader(bufferedInputStream)))
-                        .withType(Card.class)
+                CsvToBean<MusicBand> cb = new CsvToBeanBuilder<MusicBand>(new BufferedReader(new InputStreamReader(bufferedInputStream)))
+                        .withType(MusicBand.class)
                         .withSeparator(';')
                         .withIgnoreLeadingWhiteSpace(true)
                         .build();
                 //HashMap<String, Card> hashMap = new LinkedHashMap<String, Card>();
-                List<Card> list = cb.parse();
-                for (Card card : list) {
+                List<MusicBand> list = cb.parse();
+                for (MusicBand musicBand : list) {
 
-                    System.out.println("ID: " + card.getId());
-                    System.out.println("name: " + card.getName());
-                    System.out.println("surname: " + card.getSurname());
+                    System.out.println("ID: " + musicBand.getId());
+                    System.out.println("name: " + musicBand.getName());
+                    System.out.println("coordinates " + musicBand.getCoordinates());
 
                 }
-
-//                for (Card card: cb.stream().toList()) {
-//                    System.out.println(card);
-//                }
 
             } catch (IOException e) {
                 throw new RuntimeException(e);

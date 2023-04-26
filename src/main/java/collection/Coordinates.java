@@ -1,11 +1,13 @@
 package collection;
 
 
+import com.opencsv.bean.CsvBindByPosition;
 
 public class Coordinates {
 
+    @CsvBindByPosition(position = 2)
     private Double x;
-
+    @CsvBindByPosition(position = 3)
     private int y;
 
     public Coordinates( Double x, int y) {

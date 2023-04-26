@@ -1,12 +1,14 @@
 package collection;
 
 
+import com.opencsv.bean.CsvBindByPosition;
+
 import java.time.LocalDate;
 
 public class MusicBand {
-
+    @CsvBindByPosition(position = 0)
     private Long id;
-
+    @CsvBindByPosition(position = 1)
     private String name;
 
     private Coordinates coordinates;
@@ -22,7 +24,7 @@ public class MusicBand {
     private MusicGenre genre;
     private Label label;
 
-//    public MusicBand() {}
+    public MusicBand() {}
     public MusicBand(Long id, String name, Coordinates coordinates,
                      LocalDate creationDate, Long numberOfParticipants, int singlesCount,
                      Integer albumsCount, MusicGenre genre, Label label) {
