@@ -1,30 +1,26 @@
 package collection;
 
-
-import com.opencsv.bean.CsvBindByPosition;
+import com.opencsv.bean.CsvDate;
 
 import java.time.LocalDate;
 
 public class MusicBand {
-    @CsvBindByPosition(position = 0)
+
     private Long id;
-    @CsvBindByPosition(position = 1)
     private String name;
-
     private Coordinates coordinates;
-
+    @CsvDate(value = "yyyy-MM-dd")
     private LocalDate creationDate;
 
     private Long numberOfParticipants;
-
     private int singlesCount;
-
     private Integer albumsCount;
-
     private MusicGenre genre;
     private Label label;
 
-    public MusicBand() {}
+    public MusicBand() {
+    }
+
     public MusicBand(Long id, String name, Coordinates coordinates,
                      LocalDate creationDate, Long numberOfParticipants, int singlesCount,
                      Integer albumsCount, MusicGenre genre, Label label) {
@@ -67,7 +63,7 @@ public class MusicBand {
     }
 
     public LocalDate getCreationDate() {
-        return this.creationDate;
+        return creationDate;
     }
 
     public LocalDate setCreationDate(LocalDate creationDate) {
@@ -76,7 +72,7 @@ public class MusicBand {
     }
 
     public Long getNumberOfParticipants() {
-        return this.numberOfParticipants;
+        return numberOfParticipants;
     }
 
     public Long setNumberOfParticipants(Long numberOfParticipants) {

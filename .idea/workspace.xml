@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Problem with Parsing">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Refactoring parsing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collection.csv" beforeDir="false" afterPath="$PROJECT_DIR$/collection.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/collection/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/collection/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/Coordinates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" afterDir="false" />
     </list>
@@ -193,6 +192,18 @@
           <properties class="java.lang.ClassNotFoundException" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/collection/Coordinates.java</url>
+          <line>6</line>
+          <properties field="x" class="collection.Coordinates" />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/collection/Coordinates.java</url>
+          <line>8</line>
+          <properties field="y" class="collection.Coordinates" />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint enabled="true" type="java-exception" />
@@ -200,7 +211,7 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="((InterruptedException)InterruptedException1330_DebugLabel).stackTrace" custom="java.lang.InterruptedException" />
+        <watch expression="((InterruptedException)InterruptedException1330_DebugLabel).stackTrace" language="JAVA" custom="java.lang.InterruptedException" />
       </configuration>
     </watches-manager>
   </component>

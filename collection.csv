@@ -1,3 +1,4 @@
-1;a;12.3;4
+id;name;coordinates.X;coordinates.Y;creationDate;numberOfParticipants;singlesCount;albumsCount;genre;label.name;label.bands
+1;a;12.3;4;2023-04-27;123
 2;b;12.3;4
 3;c;12.3;4

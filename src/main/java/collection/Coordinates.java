@@ -1,22 +1,19 @@
 package collection;
 
-
-import com.opencsv.bean.CsvBindByPosition;
-
 public class Coordinates {
 
-    @CsvBindByPosition(position = 2)
     private Double x;
-    @CsvBindByPosition(position = 3)
+
     private int y;
 
     public Coordinates( Double x, int y) {
         this.x = x;
         this.y = y;
     }
+    public Coordinates() {}
 
     public Double getX() {
-        return this.x;
+        return x;
     }
     public Double setX(Double x) {
         this.x = x;
@@ -24,7 +21,7 @@ public class Coordinates {
     }
 
     public int getY() {
-        return this.y;
+        return y;
     }
     public int setY(int y) {
         this.y = y;
