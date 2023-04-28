@@ -1,3 +1,5 @@
+package commands;
+
 import java.util.Map;
 
 public class HelpCommand extends Command {
@@ -6,12 +8,12 @@ public class HelpCommand extends Command {
         super(name, description);
     }
 
-    Invoker invoker = new Invoker();
+    CommandSet cs = new CommandSet();
 
     @Override
     public void execute() {
         System.out.println("-AVAILABLE COMMANDS-");
-        for (Map.Entry<String, Command> set : invoker.getCommandSet().entrySet()) {
+        for (Map.Entry<String, Command> set : cs.getCommandSet().entrySet()) {
             System.out.println(set.getValue().getDescription());
         }
     }

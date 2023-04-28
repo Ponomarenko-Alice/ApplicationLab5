@@ -4,10 +4,14 @@ import java.util.LinkedHashMap;
 
 public class CollectionOfMusicBand {
 
-    LinkedHashMap<Integer, Card> collectionOfCards = new LinkedHashMap<>();
+    LinkedHashMap<Long, MusicBand> collectionOfCards = new LinkedHashMap<>();
 
-    public void addCard(Integer integer, Card card) {
-        collectionOfCards.put(integer, card);
+    public LinkedHashMap<Long, MusicBand> getCollectionOfCards() {
+        return collectionOfCards;
+    }
+
+    public void addMusicBand(Long key, MusicBand musicBand) {
+        collectionOfCards.put(key, musicBand);
     }
 
     public  String getName() {

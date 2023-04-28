@@ -1,6 +1,10 @@
+package commands;
 import java.util.LinkedHashMap;
 
-public class Invoker {
+public class CommandSet {
+
+    public CommandSet() {
+    }
 
     public LinkedHashMap<String, Command> getCommandSet() {
         LinkedHashMap<String, Command> commands = new LinkedHashMap<>();
@@ -8,7 +12,8 @@ public class Invoker {
         commands.put("info", new InfoCommand("info", " gets information about the type of collection."));
 
         return commands;
-
     }
+
+
 
 }

@@ -1,4 +1,4 @@
-
+package commands;
 
 public abstract class Command {
     protected String name;
@@ -14,7 +14,7 @@ public abstract class Command {
     }
 
     public String toString() {
-        return "Command " + "'" + name + "'" + description;
+        return "commands.Command " + "'" + name + "'" + description;
     }
 
     public void execute() {
