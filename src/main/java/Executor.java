@@ -1,41 +1,39 @@
 import collection.CollectionOfMusicBand;
 import collection.MusicBand;
-import commands.Command;
-import commands.CommandSet;
+import commands.ShowCommand;
 
 import java.io.*;
-import java.util.LinkedHashMap;
-
 
 public class Executor {
-    private CollectionOfMusicBand collectionOfMusicBand;
     private InputStream input;
+    private File file;
+    private CollectionOfMusicBand collectionOfMusicBand;
 
-    Executor() {
+    public Executor(InputStream inputStream, CollectionOfMusicBand collectionOfMusicBand, File file) {
+        this.input = inputStream;
+        this.collectionOfMusicBand = collectionOfMusicBand;
+        this.file = file;
     }
 
-
-    static {
-        CommandSet cs = new CommandSet();
-        LinkedHashMap<String, Command> commandSet = cs.getCommandSet();
-    }
+//    static {
+//        CommandSet cs = new CommandSet();
+//        LinkedHashMap<String, Command> commandSet = cs.getCommandSet();
+//    }
 
 //    метод принимает файл из main, должен заполнить коллекцию
 
-    private void fillCollectionMusicBand(File file1, CollectionOfMusicBand collectionOfMusicBand1) {
-        ParserCSV parser = new ParserCSV(file1);
+    private void fillCollectionMusicBand() {
+        ParserCSV parser = new ParserCSV(file);
         for (MusicBand musicBand : parser.getListCollection()) {
-            collectionOfMusicBand1.addMusicBand(musicBand.getId(), musicBand);
+            collectionOfMusicBand.addMusicBand(musicBand.getId(), musicBand);
         }
     }
 
 //    Коллекцию создали в main один раз
-    public void start(InputStream inputStream, CollectionOfMusicBand collectionOfMusicBand, File file) {
-        this.collectionOfMusicBand = collectionOfMusicBand;
-        this.fillCollectionMusicBand(file, collectionOfMusicBand);
-        System.out.println(collectionOfMusicBand.getCollectionOfCards());
-
+    public void start() {
+        this.fillCollectionMusicBand();
+        ShowCommand sc = new ShowCommand("", "", collectionOfMusicBand);
+        sc.execute();
     }
-
 
 }

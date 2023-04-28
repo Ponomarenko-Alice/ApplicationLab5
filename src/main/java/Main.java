@@ -1,5 +1,4 @@
 import collection.CollectionOfMusicBand;
-
 import java.io.File;
 
 public class Main {
@@ -11,7 +10,10 @@ public class Main {
         CollectionOfMusicBand collectionOfMusicBand = new CollectionOfMusicBand();
 //      передаваемый аргумент - файл
 
-        Executor executor = new Executor();
-        executor.start(System.in, collectionOfMusicBand, fileTest);
+        Executor executor = new Executor(System.in, collectionOfMusicBand, fileTest);
+        executor.start();
+
     }
+
+
 }

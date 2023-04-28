@@ -4,8 +4,8 @@ import collection.CollectionOfMusicBand;
 
 
 public class InfoCommand extends Command {
-    public InfoCommand(String name, String description) {
-        super(name, description);
+    public InfoCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand) {
+        super(name, description, collectionOfMusicBand);
     }
     CollectionOfMusicBand collectionOfMusicBand = new CollectionOfMusicBand();
 
