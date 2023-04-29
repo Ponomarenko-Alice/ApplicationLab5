@@ -10,6 +10,7 @@ public class Main {
         Executor executor = new Executor(System.in, collectionOfMusicBand, fileTest);
         executor.start();
 
+
     }
 
 

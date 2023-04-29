@@ -7,7 +7,6 @@ public class InfoCommand extends Command {
     public InfoCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand) {
         super(name, description, collectionOfMusicBand);
     }
-    CollectionOfMusicBand collectionOfMusicBand = new CollectionOfMusicBand();
 
     @Override
     public void execute() {
@@ -17,6 +16,5 @@ public class InfoCommand extends Command {
         System.out.println("Number of card : " + collectionOfMusicBand.getNumberOfCardsOfCards());
 
     }
-
 
 }

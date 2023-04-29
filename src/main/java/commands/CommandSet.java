@@ -15,6 +15,8 @@ public class CommandSet {
         commands.put("help", new HelpCommand("help"," shows help for available commands.", collectionOfMusicBand));
         commands.put("info", new InfoCommand("info", " gets information about the type of collection.", collectionOfMusicBand));
         commands.put("show", new ShowCommand("show", " description", collectionOfMusicBand));
+        commands.put("clear", new ClearCommand("clear", " delete all music bands from collection", collectionOfMusicBand));
+
 
         return commands;
     }

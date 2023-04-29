@@ -16,8 +16,6 @@ public class Executor {
         this.file = file;
     }
 
-    CommandSet commandSet = new CommandSet(collectionOfMusicBand);
-
     private void fillCollectionMusicBand() {
         ParserCSV parser = new ParserCSV(file);
         for (MusicBand musicBand : parser.getListCollection()) {
@@ -29,14 +27,16 @@ public class Executor {
         this.fillCollectionMusicBand();
 
         Scanner scanner = new Scanner(input);
+        CommandSet commandSet = new CommandSet(this.collectionOfMusicBand);
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             if (line != null) {
                 String[] tokens = line.split(" ");
                 Command command = commandSet.getCommandSet().get(tokens[0]);
                 command.execute();
+            } else {
+                System.out.println("line is null");
             }
         }
     }
-
 }
