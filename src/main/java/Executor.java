@@ -28,15 +28,21 @@ public class Executor {
 
         Scanner scanner = new Scanner(input);
         CommandSet commandSet = new CommandSet(this.collectionOfMusicBand);
+
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
-            if (line != null) {
-                String[] tokens = line.split(" ");
-                Command command = commandSet.getCommandSet().get(tokens[0]);
-                command.execute();
-            } else {
-                System.out.println("line is null");
+            try {
+                if (line != null) {
+                    String[] tokens = line.split(" ");
+                    Command command = commandSet.getCommandSet().get(tokens[0]);
+                    command.execute();
+                } else {
+                    System.out.println("line is null");
+                }
+            } catch (NullPointerException e) {
+                System.out.println("Non-existed command. Try 'help' command for available commands.");
             }
+
         }
     }
 }
