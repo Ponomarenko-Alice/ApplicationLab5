@@ -41,6 +41,8 @@ public class Executor {
                 }
             } catch (NullPointerException e) {
                 System.out.println("Non-existed command. Try 'help' command for available commands.");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
 
         }

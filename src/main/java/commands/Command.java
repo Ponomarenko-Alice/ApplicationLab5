@@ -2,6 +2,8 @@ package commands;
 
 import collection.CollectionOfMusicBand;
 
+import java.io.IOException;
+
 public abstract class Command {
     protected String name;
     protected String description;
@@ -22,7 +24,7 @@ public abstract class Command {
         return "Command " + "'" + name + "'" + description;
     }
 
-    public void execute() {
+    public void execute() throws IOException {
     }
 
 }

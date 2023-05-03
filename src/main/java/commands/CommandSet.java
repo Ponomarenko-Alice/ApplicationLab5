@@ -16,6 +16,7 @@ public class CommandSet {
         commands.put("info", new InfoCommand("info", " gets information about the type of collection.", collectionOfMusicBand));
         commands.put("show", new ShowCommand("show", " description", collectionOfMusicBand));
         commands.put("clear", new ClearCommand("clear", " delete all music bands from collection", collectionOfMusicBand));
+        commands.put("save", new SaveCommand("save", " save all changes", collectionOfMusicBand));
 
 
         return commands;

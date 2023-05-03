@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add ClearCommand">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add exception to Executor">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2023_12_07_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2023_12_07__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collection.csv" beforeDir="false" afterPath="$PROJECT_DIR$/collection.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Executor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ParserCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParserCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collection/CollectionOfMusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/CollectionOfMusicBand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ShowCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682780062438</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add exception to Executor">
+      <created>1683040967140</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1683040967140</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,7 +232,8 @@
     <MESSAGE value="Add ParserCSV class" />
     <MESSAGE value="Add ShowCommand" />
     <MESSAGE value="Add ClearCommand" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ClearCommand" />
+    <MESSAGE value="Add exception to Executor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add exception to Executor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

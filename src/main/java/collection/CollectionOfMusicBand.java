@@ -6,6 +6,7 @@ public class CollectionOfMusicBand {
 
     LinkedHashMap<Long, MusicBand> collectionOfCards = new LinkedHashMap<>();
 
+
     public LinkedHashMap<Long, MusicBand> getCollectionOfCards() {
         return collectionOfCards;
     }

@@ -3,6 +3,7 @@ package commands;
 import collection.CollectionOfMusicBand;
 import collection.MusicBand;
 
+
 public class ShowCommand extends Command {
     public ShowCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand) {
         super(name, description, collectionOfMusicBand);

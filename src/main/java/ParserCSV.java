@@ -27,7 +27,7 @@ public class ParserCSV {
                 CsvToBean<MusicBand> cb = new CsvToBeanBuilder<MusicBand>(new BufferedReader(new InputStreamReader(bufferedInputStream)))
                         .withMappingStrategy(musicBandStrategy)
                         .withType(MusicBand.class)
-                        .withSeparator(';')
+                        .withSeparator(',')
                         .withSkipLines(1)
                         .withIgnoreLeadingWhiteSpace(true)
                         .build();
