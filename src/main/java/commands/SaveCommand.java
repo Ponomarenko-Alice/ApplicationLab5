@@ -9,12 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
-public class SaveCommand extends Command{
+public class SaveCommand extends Command {
     private List<String[]> stringFieldsList;
 
-    public SaveCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand) {
-        super(name, description, collectionOfMusicBand);
+    public SaveCommand(CollectionOfMusicBand collectionOfMusicBand) {
+        super(collectionOfMusicBand);
     }
 
 
@@ -29,19 +28,17 @@ public class SaveCommand extends Command{
 //                stringCardList[2] = card.getCoordinates().getX().toString();
 //                stringCardList[3] = card.getCoordinates().getY().toString();
                 stringCardList[4] = card.getCreationDate().toString();
-//                stringCardList[5] = card.getNumberOfParticipants().toString();
-//                Integer a = new Integer(card.getSinglesCount());
-//                stringCardList[6] = a.toString();
-//                stringCardList[7] = card.getAlbumsCount().toString();
-//                stringCardList[8] = card.getGenre().toString();
-////                stringCardList[9] = card.getLabel().getName();
-////                Integer b = new Integer(card.getLabel().getBands()); <----------
-////                stringCardList[10] = b.toString();
+                stringCardList[5] = card.getNumberOfParticipants().toString();
+                Integer a = card.getSinglesCount();
+                stringCardList[6] = a.toString();
+                stringCardList[7] = card.getAlbumsCount().toString();
+                stringCardList[8] = card.getGenre().toString();
+//                stringCardList[9] = card.getLabel().getName();
+////              Integer b = card.getLabel().getBands(); <----------
+////              stringCardList[10] = b.toString();
 
-//TODO показать блок инициализации
 
                 stringListCollection.add(stringCardList);
-
             }
             this.stringFieldsList = stringListCollection;
         } catch (Exception ignored) {
@@ -54,9 +51,16 @@ public class SaveCommand extends Command{
         WriterCSV writerCSV = new WriterCSV("out.csv", stringFieldsList);
         writerCSV.writeToFile();
         System.out.println("The collection was saved successfully to file " + writerCSV.getFileName());
-
-
     }
 
+    @Override
+    public String getName() {
+        return "save";
+    }
+
+    @Override
+    public String getDescription() {
+        return " saves all changes.";
+    }
 
 }

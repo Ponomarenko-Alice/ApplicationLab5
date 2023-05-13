@@ -1,4 +1,4 @@
 id,name,coordinates.X,coordinates.Y,creationDate,numberOfParticipants,singlesCount,albumsCount,genre,label.name,label.bands
-1,a,12.3,4,2023-04-27,123
-2,b,12.3,4,2022-05-11,123
-3,c,12.3,4,2021-03-12,123
+1,a,12.3,4,2023-04-27,123,1,345,POST_PUNK,name1,555
+2,b,12.3,4,2022-05-11,123,2,87,SOUL,name2,66
+3,c,12.3,4,2021-03-12,123,3,78,SOUL,name3,246

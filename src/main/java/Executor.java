@@ -2,13 +2,20 @@ import collection.CollectionOfMusicBand;
 import collection.MusicBand;
 import commands.Command;
 import commands.CommandSet;
+import commands.HistoryCommand;
+
 import java.io.*;
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.Scanner;
+
+import static org.apache.commons.lang3.ArrayUtils.remove;
 
 public class Executor {
     private final InputStream input;
     private final File file;
     private CollectionOfMusicBand collectionOfMusicBand;
+
 
     public Executor(InputStream inputStream, CollectionOfMusicBand collectionOfMusicBand, File file) {
         this.input = inputStream;
@@ -23,6 +30,12 @@ public class Executor {
         }
     }
 
+
+    //    !!!!!!!
+    HistoryCommand historyCommand = new HistoryCommand(null);
+    LinkedList<String> history1 = historyCommand.getHistory();
+
+
     public void start() {
         this.fillCollectionMusicBand();
 
@@ -35,7 +48,21 @@ public class Executor {
                 if (line != null) {
                     String[] tokens = line.split(" ");
                     Command command = commandSet.getCommandSet().get(tokens[0]);
+                    String[] tokens1 = remove(tokens, 0);
+                    System.out.println("tokens1   " + Arrays.stream(tokens1).toList());
+                    if (tokens1.length != 0) {
+                        command.setParams(tokens1);
+                    }
                     command.execute();
+
+                    commandSet.getCommandSet().get("history");
+
+
+                    historyCommand.addCommandToHistory(tokens[0]);
+
+                    System.out.println(history1);
+
+
                 } else {
                     System.out.println("line is null");
                 }
@@ -44,7 +71,6 @@ public class Executor {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
         }
     }
 }
