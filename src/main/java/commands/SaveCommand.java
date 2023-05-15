@@ -12,8 +12,8 @@ import java.util.List;
 public class SaveCommand extends Command {
     private List<String[]> stringFieldsList;
 
-    public SaveCommand(CollectionOfMusicBand collectionOfMusicBand) {
-        super(collectionOfMusicBand);
+    public SaveCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
+        super(collectionOfMusicBand, commands);
     }
 
 

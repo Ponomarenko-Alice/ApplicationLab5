@@ -4,8 +4,8 @@ import collection.CollectionOfMusicBand;
 
 public class ClearCommand extends Command {
 
-    public ClearCommand(CollectionOfMusicBand collectionOfMusicBand, String... params) {
-        super(collectionOfMusicBand, params);
+    public ClearCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commandSet, String... params) {
+        super(collectionOfMusicBand, commandSet, params);
     }
 
     @Override

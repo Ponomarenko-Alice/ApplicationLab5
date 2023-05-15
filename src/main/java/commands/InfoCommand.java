@@ -5,8 +5,8 @@ import collection.CollectionOfMusicBand;
 
 public class InfoCommand extends Command {
 
-    public InfoCommand(CollectionOfMusicBand collectionOfMusicBand) {
-        super(collectionOfMusicBand);
+    public InfoCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
+        super(collectionOfMusicBand, commands);
     }
 
     @Override
@@ -19,7 +19,8 @@ public class InfoCommand extends Command {
 
     @Override
     public String getName() {
-        return "info";}
+        return "info";
+    }
 
     @Override
     public String getDescription() {

@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add SaveCommand and WriterCSV classes&#10;-delimiter in the file with collection is &quot;,&quot; now">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add field CommandSet to Command class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection.csv" beforeDir="false" afterPath="$PROJECT_DIR$/collection.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Executor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/collection/CollectionOfMusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/CollectionOfMusicBand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" afterDir="false" />
@@ -241,7 +239,8 @@
     <MESSAGE value="Add ClearCommand" />
     <MESSAGE value="Add exception to Executor" />
     <MESSAGE value="Add SaveCommand and WriterCSV classes&#10;-delimiter in the file with collection is &quot;,&quot; now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add SaveCommand and WriterCSV classes&#10;-delimiter in the file with collection is &quot;,&quot; now" />
+    <MESSAGE value="Add field CommandSet to Command class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add field CommandSet to Command class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

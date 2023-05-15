@@ -6,12 +6,14 @@ import java.io.IOException;
 
 public abstract class Command {
     protected CollectionOfMusicBand collectionOfMusicBand;
-    private String[] params;
+    protected CommandSet commands;
+    protected String[] params;
 
-    public Command(CollectionOfMusicBand collectionOfMusicBand, String... params) {
+
+    public Command(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
         this.collectionOfMusicBand = collectionOfMusicBand;
+        this.commands = commands;
         this.params = params;
-
     }
 
     public String getDescriptionCommand() {
@@ -40,5 +42,4 @@ public abstract class Command {
     public String getDescription() {
         return null;
     }
-
 }

@@ -6,8 +6,8 @@ import collection.MusicBand;
 
 public class ShowCommand extends Command {
 
-    public ShowCommand(CollectionOfMusicBand collectionOfMusicBand) {
-        super(collectionOfMusicBand);
+    public ShowCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
+        super(collectionOfMusicBand, commands);
     }
 
     @Override

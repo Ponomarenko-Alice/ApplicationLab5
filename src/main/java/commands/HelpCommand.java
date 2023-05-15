@@ -7,16 +7,14 @@ import java.util.Map;
 public class HelpCommand extends Command {
 
 
-    public HelpCommand(CollectionOfMusicBand collectionOfMusicBand, String... params) {
-        super(collectionOfMusicBand, params);
+    public HelpCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+        super(collectionOfMusicBand, commands, params);
     }
 
     @Override
     public void execute() {
         System.out.println("-AVAILABLE COMMANDS-");
-        совсем не думается сейчас, да?)))
-        максимально ))) )
-        for (Map.Entry<String, Command> set : cs.getCommandSet().entrySet()) {
+        for (Map.Entry<String, Command> set : commands.getCommandSet().entrySet()) {
             System.out.println(set.getValue().getDescriptionCommand());
         }
     }

@@ -2,19 +2,15 @@ package commands;
 
 import collection.CollectionOfMusicBand;
 
+
 public class InsertCommand extends Command {
 
-    public InsertCommand(CollectionOfMusicBand collectionOfMusicBand) {
-        super(collectionOfMusicBand);
+    public InsertCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
+        super(collectionOfMusicBand, commands);
     }
 
     @Override
     public void execute() {
-        try {
-            System.out.println("");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
 
     }
 
@@ -28,3 +24,8 @@ public class InsertCommand extends Command {
         return " adds new card to collection.";
     }
 }
+
+
+
+
+

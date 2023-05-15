@@ -22,5 +22,5 @@ public class CollectionOfMusicBand {
         return collectionOfCards.size();
     }
 
-    public
+
 }
