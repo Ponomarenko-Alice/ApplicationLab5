@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add field CommandSet to Command class">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add functional to HistoryCommand">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Executor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" afterDir="false" />
@@ -207,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684156747708</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add functional to HistoryCommand">
+      <created>1684320210038</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1684320210038</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,7 +247,8 @@
     <MESSAGE value="Add exception to Executor" />
     <MESSAGE value="Add SaveCommand and WriterCSV classes&#10;-delimiter in the file with collection is &quot;,&quot; now" />
     <MESSAGE value="Add field CommandSet to Command class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add field CommandSet to Command class" />
+    <MESSAGE value="Add functional to HistoryCommand" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add functional to HistoryCommand" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

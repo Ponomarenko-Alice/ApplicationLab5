@@ -3,6 +3,7 @@ package collection;
 import com.opencsv.bean.CsvDate;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class MusicBand {
 
@@ -129,6 +130,7 @@ public class MusicBand {
 
         public CardBuilder() {}
 
+
         public CardBuilder setId(Long id) {
             this.id = id;
             return this;
@@ -169,12 +171,10 @@ public class MusicBand {
             return this;
         }
 //
-//        public CardBuilder build() {
-////            return new MusicBand(this);
-//
-//        }
-
-
+        public CardBuilder build() {
+//          return new MusicBand(this);
+            return null;
+        }
 
     }
 }

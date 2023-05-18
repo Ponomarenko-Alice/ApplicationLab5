@@ -5,8 +5,6 @@ import commands.CommandSet;
 import commands.HistoryCommand;
 
 import java.io.*;
-import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.Scanner;
 
 import static org.apache.commons.lang3.ArrayUtils.remove;
@@ -31,11 +29,6 @@ public class Executor {
     }
 
 
-    //    !!!!!!!
-    HistoryCommand historyCommand = new HistoryCommand(null);
-    LinkedList<String> history1 = historyCommand.getHistory();
-
-
     public void start() {
         this.fillCollectionMusicBand();
 
@@ -46,21 +39,17 @@ public class Executor {
             String line = scanner.nextLine();
             try {
                 if (line != null) {
-                    String[] tokens = line.split(" ");
+                    String[] tokens = line.trim().split(" ");
+
                     Command command = commandSet.getCommandSet().get(tokens[0]);
                     String[] tokens1 = remove(tokens, 0);
-                    System.out.println("tokens1   " + Arrays.stream(tokens1).toList());
                     if (tokens1.length != 0) {
                         command.setParams(tokens1);
                     }
                     command.execute();
 
-                    commandSet.getCommandSet().get("history");
-
-
-                    historyCommand.addCommandToHistory(tokens[0]);
-
-                    System.out.println(history1);
+                    HistoryCommand historyCommand1 = (HistoryCommand) commandSet.getCommandSet().get("history");
+                    historyCommand1.addCommandToHistory(tokens[0]);
 
 
                 } else {

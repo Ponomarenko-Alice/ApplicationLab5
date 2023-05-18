@@ -17,6 +17,8 @@ public class CommandSet {
         commands.put("clear", new ClearCommand(collectionOfMusicBand, this));
         commands.put("save", new SaveCommand(collectionOfMusicBand, this));
         commands.put("history", new HistoryCommand(null, this));
+        commands.put("insert", new InsertCommand(collectionOfMusicBand, this));
+
     }
 
 
