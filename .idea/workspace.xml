@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add functional to HistoryCommand">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add check id in InsertCommand&#10;-the while-block was moved to a separate method, to be able called in the catch-block">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Executor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApplicationLab5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ApplicationLab5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684320210038</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Add some functional to InsertCommand&#10;-check params(id)">
+      <created>1684441305350</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1684441305350</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,7 +229,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -248,7 +267,9 @@
     <MESSAGE value="Add SaveCommand and WriterCSV classes&#10;-delimiter in the file with collection is &quot;,&quot; now" />
     <MESSAGE value="Add field CommandSet to Command class" />
     <MESSAGE value="Add functional to HistoryCommand" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add functional to HistoryCommand" />
+    <MESSAGE value="Add some functional to InsertCommand&#10;-check params(id)" />
+    <MESSAGE value="Add check id in InsertCommand&#10;-the while-block was moved to a separate method, to be able called in the catch-block" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add check id in InsertCommand&#10;-the while-block was moved to a separate method, to be able called in the catch-block" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

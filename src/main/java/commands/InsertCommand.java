@@ -2,6 +2,7 @@ package commands;
 
 import collection.CollectionOfMusicBand;
 import collection.MusicBand;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -17,36 +18,36 @@ public class InsertCommand extends Command {
 
     @Override
     public void execute() {
+        Scanner in = null;
         try {
-
-            Scanner in = new Scanner(System.in);
-            if (params.length != 0) {
-                if (this.checkFormatId(Arrays.stream(params).toList().get(0))) {
-                    if (this.checkUniqueId(Arrays.stream(params).toList().get(0))) {
-                        System.out.println("good for first time");
-//                        передаем айдишник в конструктор картотчки
-                    } else {
-                        System.out.println("not unique");
-                    }
-                } else {
-                    System.out.println("Enter id in format 1-18 digits only");
-                }
-            } else {
+            in = new Scanner(System.in);
+            if (params.length == 0) {
+                System.out.println("Id will be generated");
 //                генерируем айдишник сами и передаем в конструктор
-                System.out.println("null line. try again");
-                while (!this.checkUniqueId(in.nextLine())) {
-                    System.out.println("This id is already exist. Try again");
+            } else {
+                String param = Arrays.stream(params).toList().get(0);
+                if (this.checkFormatId(param) && this.checkUniqueId(param)) {
+                    System.out.println("good id");
+//                     передаем айдишник в конструктор карточки
+                } else {
+                    if (!this.checkFormatId(param)) {
+                        System.out.println("Enter id in format 1-18 digits only. Try again or enter null");
+                    }
+                    if (!this.checkUniqueId(param)) {
+                        System.out.println("This id already exists. Try again");
+                    }
+                    this.whileBlock(in);
+
                 }
-                System.out.println("success!");
             }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        } catch (NumberFormatException e) {
+            assert in != null;
+            this.whileBlock(in);
         }
     }
 
-    private Boolean checkUniqueId(String str) {
+    private Boolean checkUniqueId(String str) throws NumberFormatException{
         boolean flag = true;
-//        блок try который выкидывает ошибку если не может перевести в long(под вопросом, должно провериться в формате сначла)
         Long id = Long.parseLong(str);
         for (MusicBand musicBand : collectionOfMusicBand.getCollectionOfCards().values()) {
             if (id.equals(musicBand.getId())) {
@@ -58,28 +59,42 @@ public class InsertCommand extends Command {
     }
 
     private Boolean checkFormatId(String str) {
-
-        boolean flag = false;
+        boolean flag = true;
         String regex = "^[0-9]{1,18}$";
         Pattern pattern = Pattern.compile(regex);
-
         Matcher mather = pattern.matcher(str);
-        if (mather.matches()) {
-            flag = true;
-            System.out.println("Enter id in format 1-18 digits only");
+        if (!mather.matches()) {
+            flag = false;
         }
         return flag;
     }
 
     private Boolean checkNotNullId(String str) {
-        boolean flag = true;
-        if (str.length() == 0) {
-            flag = false;
-            System.out.println("null line");
-        }
-        return flag;
+        return str.length() != 0;
     }
 
+    private void whileBlock(@NotNull Scanner in) {
+        while (true) {
+            String id = in.nextLine();
+            if (this.checkNotNullId(id) && this.checkFormatId(id) && this.checkUniqueId(id)) {
+                System.out.println("success!");
+                // айдишник корректен, выходим из цикла
+                break;
+            } else {
+                if (!this.checkNotNullId(id)) {
+                    System.out.println("Id will be generated");
+                    // генерируем айдишник сами и передаем в конструктор
+                    break;
+                } else if (!this.checkFormatId(id)) {
+                    System.out.println("Enter id in format 1-18 digits only. Try again or enter null");
+                } else if (!this.checkUniqueId(id)) {
+                    System.out.println("This id already exists. Try again");
+                } else {
+                    System.out.println("Bad id. Try again");
+                }
+            }
+        }
+    }
 
 
     @Override
@@ -92,8 +107,3 @@ public class InsertCommand extends Command {
         return " adds new card to collection.";
     }
 }
-
-
-
-
-
