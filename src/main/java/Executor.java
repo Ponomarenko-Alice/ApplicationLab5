@@ -39,7 +39,7 @@ public class Executor {
             String line = scanner.nextLine();
             try {
                 if (line != null) {
-                    String[] tokens = line.trim().split(" ");
+                    String[] tokens = line.trim().split("\\s+");
 
                     Command command = commandSet.getCommandSet().get(tokens[0]);
                     String[] tokens1 = remove(tokens, 0);

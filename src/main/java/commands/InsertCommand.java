@@ -78,6 +78,7 @@ public class InsertCommand extends Command {
             String id = in.nextLine();
             if (this.checkNotNullId(id) && this.checkFormatId(id) && this.checkUniqueId(id)) {
                 System.out.println("success!");
+
                 // айдишник корректен, выходим из цикла
                 break;
             } else {
