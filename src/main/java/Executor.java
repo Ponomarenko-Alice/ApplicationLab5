@@ -27,7 +27,6 @@ public class Executor {
         }
     }
 
-
     public void start() {
         this.fillCollectionMusicBand();
 
