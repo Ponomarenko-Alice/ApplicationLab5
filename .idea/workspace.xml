@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add check id in InsertCommand&#10;-the while-block was moved to a separate method, to be able called in the catch-block">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Fix id check &#10;-now the extra spaces are removed from the param string">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Executor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" afterDir="false" />
@@ -227,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684516494021</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Fix id check &#10;-now the extra spaces are removed from the param string">
+      <created>1684518649029</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1684518649029</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -275,7 +282,9 @@
     <MESSAGE value="Add functional to HistoryCommand" />
     <MESSAGE value="Add some functional to InsertCommand&#10;-check params(id)" />
     <MESSAGE value="Add check id in InsertCommand&#10;-the while-block was moved to a separate method, to be able called in the catch-block" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add check id in InsertCommand&#10;-the while-block was moved to a separate method, to be able called in the catch-block" />
+    <MESSAGE value="Fix id check&#10;-now the extra spaces are removed from the param string" />
+    <MESSAGE value="Fix id check &#10;-now the extra spaces are removed from the param string" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix id check &#10;-now the extra spaces are removed from the param string" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

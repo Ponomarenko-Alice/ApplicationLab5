@@ -6,7 +6,6 @@ import commands.HistoryCommand;
 
 import java.io.*;
 import java.util.Scanner;
-
 import static org.apache.commons.lang3.ArrayUtils.remove;
 
 public class Executor {
@@ -42,16 +41,14 @@ public class Executor {
                     String[] tokens = line.trim().split("\\s+");
 
                     Command command = commandSet.getCommandSet().get(tokens[0]);
-                    String[] tokens1 = remove(tokens, 0);
-                    if (tokens1.length != 0) {
-                        command.setParams(tokens1);
+                    String[] params = remove(tokens, 0);
+                    if (params.length != 0) {
+                        command.setParams(params);
                     }
                     command.execute();
 
                     HistoryCommand historyCommand1 = (HistoryCommand) commandSet.getCommandSet().get("history");
                     historyCommand1.addCommandToHistory(tokens[0]);
-
-
                 } else {
                     System.out.println("line is null");
                 }
