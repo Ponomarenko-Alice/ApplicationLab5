@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add exception to Executor">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2023_12_07_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2023_12_07__Changes_.xml" beforeDir="false" />
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Fix id check &#10;-now the extra spaces are removed from the param string">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection.csv" beforeDir="false" afterPath="$PROJECT_DIR$/collection.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Executor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ParserCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParserCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/collection/CollectionOfMusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/CollectionOfMusicBand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ShowCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +42,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/alicc/Downloads/commons-collections4-4.1.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
@@ -202,7 +192,49 @@
       <option name="project" value="LOCAL" />
       <updated>1683040967140</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add SaveCommand and WriterCSV classes&#10;-delimiter in the file with collection is &quot;,&quot; now">
+      <created>1683120747606</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1683120747606</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add field CommandSet to Command class">
+      <created>1684156747708</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1684156747708</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add functional to HistoryCommand">
+      <created>1684320210038</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1684320210038</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add some functional to InsertCommand&#10;-check params(id)">
+      <created>1684441305350</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1684441305350</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Add check id in InsertCommand&#10;-the while-block was moved to a separate method, to be able called in the catch-block">
+      <created>1684516494021</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1684516494021</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Fix id check &#10;-now the extra spaces are removed from the param string">
+      <created>1684518649029</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1684518649029</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,7 +242,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -233,7 +277,14 @@
     <MESSAGE value="Add ShowCommand" />
     <MESSAGE value="Add ClearCommand" />
     <MESSAGE value="Add exception to Executor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add exception to Executor" />
+    <MESSAGE value="Add SaveCommand and WriterCSV classes&#10;-delimiter in the file with collection is &quot;,&quot; now" />
+    <MESSAGE value="Add field CommandSet to Command class" />
+    <MESSAGE value="Add functional to HistoryCommand" />
+    <MESSAGE value="Add some functional to InsertCommand&#10;-check params(id)" />
+    <MESSAGE value="Add check id in InsertCommand&#10;-the while-block was moved to a separate method, to be able called in the catch-block" />
+    <MESSAGE value="Fix id check&#10;-now the extra spaces are removed from the param string" />
+    <MESSAGE value="Fix id check &#10;-now the extra spaces are removed from the param string" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix id check &#10;-now the extra spaces are removed from the param string" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

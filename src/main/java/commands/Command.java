@@ -5,26 +5,41 @@ import collection.CollectionOfMusicBand;
 import java.io.IOException;
 
 public abstract class Command {
-    protected String name;
-    protected String description;
     protected CollectionOfMusicBand collectionOfMusicBand;
+    protected CommandSet commands;
+    protected String[] params;
 
-    public Command(String name, String description, CollectionOfMusicBand collectionOfMusicBand) {
-        this.name = name;
-        this.description = description;
+
+    public Command(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
         this.collectionOfMusicBand = collectionOfMusicBand;
-
+        this.commands = commands;
+        this.params = params;
     }
 
-    public String getDescription() {
+    public String getDescriptionCommand() {
         return this.toString();
     }
 
+    public String[] getParams() {
+        return params;
+    }
+
+    public void setParams(String[] list) {
+        this.params = list;
+    }
+
     public String toString() {
-        return "Command " + "'" + name + "'" + description;
+        return "Command " + "'" + this.getName() + "'" + this.getDescription();
     }
 
     public void execute() throws IOException {
     }
 
+    public String getName() {
+        return null;
+    }
+
+    public String getDescription() {
+        return null;
+    }
 }
