@@ -17,6 +17,8 @@ public class CommandManager {
         Scanner in = new Scanner(System.in);
         if (params.length == 0) {
             System.out.println("Id will be generated");
+            IdGenerator idGenerator = new IdGenerator(collectionOfMusicBand);
+            return idGenerator.getUniqueId();
 //                генерируем айдишник сами и передаем в конструктор
         } else {
             String param = Arrays.stream(params).toList().get(0);
@@ -36,7 +38,6 @@ public class CommandManager {
         }
         return null;
     }
-    
 
     private Boolean checkUniqueId(String str, CollectionOfMusicBand collectionOfMusicBand) throws NumberFormatException{
         boolean flag = true;
@@ -93,4 +94,7 @@ public class CommandManager {
         }
         return null;
     }
+
+
+
 }
