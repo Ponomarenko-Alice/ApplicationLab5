@@ -1,7 +1,6 @@
 package collection;
 
 import com.opencsv.bean.CsvDate;
-
 import java.time.LocalDate;
 
 public class MusicBand {
@@ -17,23 +16,6 @@ public class MusicBand {
     private Integer albumsCount;
     private MusicGenre genre;
     private Label label;
-
-    public MusicBand() {
-    }
-
-    private MusicBand(Long id, String name, Coordinates coordinates,
-                     LocalDate creationDate, Long numberOfParticipants, int singlesCount,
-                     Integer albumsCount, MusicGenre genre, Label label) {
-        this.id = id;
-        this.name = name;
-        this.coordinates = coordinates;
-        this.creationDate = creationDate;
-        this.numberOfParticipants = numberOfParticipants;
-        this.singlesCount = singlesCount;
-        this.albumsCount = albumsCount;
-        this.genre = genre;
-        this.label = label;
-    }
 
     public Long getId() {
         return this.id;
@@ -116,9 +98,20 @@ public class MusicBand {
         return label;
     }
 
-    public MusicBand(CardBuilder cardBuilder) {}
+    public MusicBand(CardBuilder cardBuilder) {
+        this.id = cardBuilder.id;
+        this.name = cardBuilder.name;
+        this.coordinates = cardBuilder.coordinates;
+        this.creationDate = cardBuilder.creationDate;
+        this.numberOfParticipants = cardBuilder.numberOfParticipants;
+        this.singlesCount = cardBuilder.singlesCount;
+        this.albumsCount = cardBuilder.albumsCount;
+        this.genre = cardBuilder.genre;
+        this.label = cardBuilder.label;
 
-    static class CardBuilder {
+    }
+
+    public static class CardBuilder {
         private Long id;
         private String name;
         private Coordinates coordinates;
@@ -129,7 +122,8 @@ public class MusicBand {
         private MusicGenre genre;
         private Label label;
 
-        public CardBuilder() {}
+        public CardBuilder() {
+        }
 
         public CardBuilder setId(Long id) {
             this.id = id;
@@ -161,6 +155,11 @@ public class MusicBand {
             return this;
         }
 
+        public CardBuilder setAlbumCount(Integer albumsCount) {
+            this.albumsCount = albumsCount;
+            return this;
+        }
+
         public CardBuilder setGenre(MusicGenre genre) {
             this.genre = genre;
             return this;
@@ -170,10 +169,12 @@ public class MusicBand {
             this.label = label;
             return this;
         }
-//
+
         public MusicBand build() {
-          return new MusicBand(this);
+            return new MusicBand(this);
 
         }
     }
+
+
 }

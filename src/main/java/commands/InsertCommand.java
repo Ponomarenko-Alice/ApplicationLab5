@@ -1,7 +1,7 @@
 package commands;
 
 import collection.CollectionOfMusicBand;
-
+import collection.MusicBand;
 
 
 public class InsertCommand extends Command {
@@ -13,7 +13,9 @@ public class InsertCommand extends Command {
     @Override
     public void execute() {
         CommandManager commandManager = new CommandManager();
-        commandManager.getIdFromUser(collectionOfMusicBand, params);
+        MusicBand musicBand = commandManager.getNewCard(collectionOfMusicBand, params);
+        collectionOfMusicBand.addMusicBand(musicBand.getId(), musicBand);
+        System.out.println("Card done! Don't forget to save collection :)");
     }
 
 

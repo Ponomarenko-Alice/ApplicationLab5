@@ -1,45 +1,46 @@
 package commands;
 
 import collection.CollectionOfMusicBand;
+import collection.Coordinates;
+import collection.Label;
 import collection.MusicBand;
 import org.jetbrains.annotations.NotNull;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CommandManager {
-    
-    public CommandManager() {}
-    
+
+    public CommandManager() {
+    }
+
     public Long getIdFromUser(CollectionOfMusicBand collectionOfMusicBand, String[] params) {
         Scanner in = new Scanner(System.in);
         if (params.length == 0) {
             System.out.println("Id will be generated");
             IdGenerator idGenerator = new IdGenerator(collectionOfMusicBand);
             return idGenerator.getUniqueId();
-//                генерируем айдишник сами и передаем в конструктор
         } else {
             String param = Arrays.stream(params).toList().get(0);
-            if (this.checkFormatId(param) && this.checkUniqueId(param, collectionOfMusicBand)) {
+            if (this.checkLongFormat(param) && this.checkUniqueId(param, collectionOfMusicBand)) {
                 System.out.println("good id");
                 return Long.parseLong(param);
-//                     передаем айдишник в конструктор карточки
             } else {
-                if (!this.checkFormatId(param)) {
+                if (!this.checkLongFormat(param)) {
                     System.out.println("Enter id in format 1-18 digits only. Try again or enter null");
                 } else if (!this.checkUniqueId(param, collectionOfMusicBand)) {
                     System.out.println("This id already exists. Try again");
                 }
-                this.whileBlock(in, collectionOfMusicBand);
+                return this.whileBlock(in, collectionOfMusicBand);
             }
 
         }
-        return null;
     }
 
-    private Boolean checkUniqueId(String str, CollectionOfMusicBand collectionOfMusicBand) throws NumberFormatException{
+    private Boolean checkUniqueId(String str, CollectionOfMusicBand collectionOfMusicBand) throws NumberFormatException {
         boolean flag = true;
         try {
             Long id = Long.parseLong(str);
@@ -52,17 +53,17 @@ public class CommandManager {
         } catch (NumberFormatException exception) {
             return false;
         }
-        
         return flag;
     }
 
-    private Boolean checkFormatId(String str) {
+    private Boolean checkLongFormat(String str) {
         boolean flag = true;
         String regex = "^[0-9]{1,18}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher mather = pattern.matcher(str);
         if (!mather.matches()) {
             flag = false;
+
         }
         return flag;
     }
@@ -73,17 +74,15 @@ public class CommandManager {
 
     private Long whileBlock(@NotNull Scanner in, CollectionOfMusicBand collectionOfMusicBand) {
         while (true) {
-            String id = in.nextLine();
-            if (this.checkNotNullId(id) && this.checkFormatId(id) && this.checkUniqueId(id, collectionOfMusicBand)) {
-                System.out.println("success!");
-                // айдишник корректен, выходим из цикла
+            String id = in.nextLine().trim();
+            if (this.checkNotNullId(id) && this.checkLongFormat(id) && this.checkUniqueId(id, collectionOfMusicBand)) {
                 return Long.parseLong(id);
             } else {
                 if (!this.checkNotNullId(id)) {
                     System.out.println("Id will be generated");
-                    // генерируем айдишник сами и передаем в конструктор
-                    break;
-                } else if (!this.checkFormatId(id)) {
+                    IdGenerator idGenerator = new IdGenerator(collectionOfMusicBand);
+                    return idGenerator.getUniqueId();
+                } else if (!this.checkLongFormat(id)) {
                     System.out.println("Enter id in format 1-18 digits only. Try again or enter null");
                 } else if (!this.checkUniqueId(id, collectionOfMusicBand)) {
                     System.out.println("This id already exists. Try again");
@@ -92,9 +91,182 @@ public class CommandManager {
                 }
             }
         }
-        return null;
     }
 
+    public String getNameFromUser() {
+        System.out.println("Enter name");
+        Scanner in = new Scanner(System.in);
+        String line = in.nextLine();
+        while (line == null || line.length() == 0) {
+            System.out.println("Name can't be null. Enter again");
+            line = in.nextLine();
+        }
+        return line;
+    }
+
+    public Double getXFromUser() {
+        System.out.println("Enter coordinate X");
+        Scanner in = new Scanner(System.in);
+        while (true) {
+            String line = in.nextLine();
+            while (line == null || line.length() == 0) {
+                System.out.println("Field can't be null. Enter again");
+                line = in.nextLine();
+            }
+            try {
+                return parseToDouble(line);
+            } catch (NumberFormatException e) {
+                System.out.println("Format X must be Double");
+            }
+        }
+
+    }
+
+    private Double parseToDouble(String str) throws NumberFormatException {
+        return Double.parseDouble(str);
+    }
+
+
+    public int getYFromUser() {
+        System.out.println("Enter coordinate Y");
+        Scanner in = new Scanner(System.in);
+        while (true) {
+            String line = in.nextLine();
+            while (line == null || line.length() == 0) {
+                System.out.println("Field can't be null. Enter again");
+                line = in.nextLine();
+            }
+            try {
+                return Integer.parseInt(line.trim());
+            } catch (NumberFormatException e) {
+                System.out.println("Format Y must be int");
+            }
+        }
+
+    }
+
+    public Long getNumberOfParticipantFromUser() {
+        System.out.println("Enter number of participant");
+        Scanner in = new Scanner(System.in);
+        while (true) {
+            String line = in.nextLine();
+            while (line == null || line.length() == 0) {
+                System.out.println("Name can't be null. Enter again");
+                line = in.nextLine();
+            }
+            try {
+                long numberOfParticipant = Long.parseLong(line.trim());
+                if (numberOfParticipant <= 0) {
+                    System.out.println("Field must be > 0");
+                } else {
+                    return numberOfParticipant;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Format must be Long");
+            }
+        }
+    }
+
+    public int getSingleCountFromUser() {
+        System.out.println("Enter single count");
+        Scanner in = new Scanner(System.in);
+        while (true) {
+            String line = in.nextLine();
+            while (line == null || line.length() == 0) {
+                System.out.println("Field can't be null. Enter again");
+                line = in.nextLine();
+            }
+            try {
+                int singleCount = Integer.parseInt(line.trim());
+                if (singleCount <= 0) {
+                    System.out.println("Field must be > 0");
+                } else {
+                    return singleCount;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Format must be int");
+            }
+        }
+    }
+
+    public Integer getAlbumCountFromUser() {
+        System.out.println("Enter album set");
+        Scanner in = new Scanner(System.in);
+        while (true) {
+            String line = in.nextLine();
+            if (line == null || line.length() == 0) {
+                return null; // по заданию
+            } else {
+                try {
+                    int albumSet = Integer.parseInt(line.trim());
+                    if (albumSet <= 0) {
+                        System.out.println("Field must be > 0");
+                    } else {
+                        return albumSet;
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Format must be Integer");
+                }
+            }
+        }
+    }
+
+    public String getLabelNameFromUser() {
+        System.out.println("Enter label name. It may be null");
+        Scanner in = new Scanner(System.in);
+        return in.nextLine();
+    }
+
+    public int getSLabelBandsFromUser() {
+        System.out.println("Enter count of label bands");
+        Scanner in = new Scanner(System.in);
+        while (true) {
+            String line = in.nextLine();
+            while (line == null || line.length() == 0) {
+                System.out.println("Field can't be null. Enter again");
+                line = in.nextLine();
+            }
+            try {
+                int labelBands = Integer.parseInt(line.trim());
+                if (labelBands <= 0) {
+                    System.out.println("Field must be > 0");
+                } else {
+                    return labelBands;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Format must be int");
+            }
+        }
+    }
+
+
+    public MusicBand getNewCard(CollectionOfMusicBand collectionOfMusicBand, String[] params) {
+        CommandManager commandManager = new CommandManager();
+        Long id = commandManager.getIdFromUser(collectionOfMusicBand, params);
+        String name = commandManager.getNameFromUser();
+        Double x = commandManager.getXFromUser();
+        int y = commandManager.getYFromUser();
+        Coordinates coordinates = new Coordinates(x, y);
+        LocalDate localDate = LocalDate.now();
+        Long numberOfParticipant = commandManager.getNumberOfParticipantFromUser();
+        int singleCount = commandManager.getSingleCountFromUser();
+        Integer albumCount = commandManager.getAlbumCountFromUser();
+        String labelName = commandManager.getLabelNameFromUser();
+        int labelBands = commandManager.getSLabelBandsFromUser();
+        Label label = new Label(labelName, labelBands);
+
+
+        return new MusicBand.CardBuilder()
+                .setId(id)
+                .setName(name)
+                .setCoordinates(coordinates)
+                .setCreationDate(localDate)
+                .setNumberOfParticipants(numberOfParticipant)
+                .setSinglesCount(singleCount)
+                .setAlbumCount(albumCount)
+                .setLabel(label)
+                .build();
+    }
 
 
 }

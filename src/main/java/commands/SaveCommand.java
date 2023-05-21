@@ -34,7 +34,7 @@ public class SaveCommand extends Command {
                 stringCardList[7] = card.getAlbumsCount().toString();
                 stringCardList[8] = card.getGenre().toString();
 //                stringCardList[9] = card.getLabel().getName();
-////              Integer b = card.getLabel().getBands(); <----------
+////              Integer b = card.getLabel().getBands();
 ////              stringCardList[10] = b.toString();
 
 
