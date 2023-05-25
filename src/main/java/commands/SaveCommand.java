@@ -2,7 +2,6 @@ package commands;
 
 import collection.CollectionOfMusicBand;
 import collection.MusicBand;
-import data.WriterCSV;
 
 import java.io.IOException;
 import java.util.ArrayList;

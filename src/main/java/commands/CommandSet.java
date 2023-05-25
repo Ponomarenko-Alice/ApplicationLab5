@@ -18,6 +18,8 @@ public class CommandSet {
         commands.put("save", new SaveCommand(collectionOfMusicBand, this));
         commands.put("history", new HistoryCommand(null, this));
         commands.put("insert", new InsertCommand(collectionOfMusicBand, this));
+        commands.put("remove_key", new RemoveKeyCommand(collectionOfMusicBand, this));
+
 
     }
 

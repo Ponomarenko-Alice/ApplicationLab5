@@ -14,10 +14,9 @@ import java.util.regex.Pattern;
 
 public class CommandManager {
 
-    public CommandManager() {
-    }
+    public CommandManager() {}
 
-    public Long getIdFromUser(CollectionOfMusicBand collectionOfMusicBand, String[] params) {
+    public Long getIdFromUserToSet(CollectionOfMusicBand collectionOfMusicBand, String[] params) {
         Scanner in = new Scanner(System.in);
         if (params.length == 0) {
             System.out.println("Id will be generated");
@@ -38,8 +37,10 @@ public class CommandManager {
 
         }
     }
-
-    private Boolean checkUniqueId(String str, CollectionOfMusicBand collectionOfMusicBand) {
+    /*
+    @param String! Long
+     */
+    public Boolean checkUniqueId(String str, CollectionOfMusicBand collectionOfMusicBand) {
         boolean flag = true;
         try {
             Long id = Long.parseLong(str);
@@ -55,29 +56,29 @@ public class CommandManager {
         return flag;
     }
 
-    private Boolean checkLongFormat(String str) {
+    /*
+    @param String
+    @return true if string is Long format
+     */
+    public Boolean checkLongFormat(String str) {
         boolean flag = true;
         String regex = "^[0-9]{1,18}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher mather = pattern.matcher(str);
         if (!mather.matches()) {
             flag = false;
-
         }
         return flag;
     }
-
-    private Boolean checkNotNullId(String str) {
-        return str.length() != 0;
-    }
+    
 
     private Long whileBlock(@NotNull Scanner in, CollectionOfMusicBand collectionOfMusicBand) {
         while (true) {
             String id = in.nextLine().trim();
-            if (this.checkNotNullId(id) && this.checkLongFormat(id) && this.checkUniqueId(id, collectionOfMusicBand)) {
+            if ((id.length() != 0) && this.checkLongFormat(id) && this.checkUniqueId(id, collectionOfMusicBand)) {
                 return Long.parseLong(id);
             } else {
-                if (!this.checkNotNullId(id)) {
+                if (id.length() == 0) {
                     System.out.println("Id will be generated");
                     IdGenerator idGenerator = new IdGenerator(collectionOfMusicBand);
                     return idGenerator.getUniqueId();
@@ -241,7 +242,7 @@ public class CommandManager {
 
     public MusicBand getNewCard(CollectionOfMusicBand collectionOfMusicBand, String[] params) {
         CommandManager commandManager = new CommandManager();
-        Long id = commandManager.getIdFromUser(collectionOfMusicBand, params);
+        Long id = commandManager.getIdFromUserToSet(collectionOfMusicBand, params);
         String name = commandManager.getNameFromUser();
         Double x = commandManager.getXFromUser();
         int y = commandManager.getYFromUser();
@@ -253,7 +254,6 @@ public class CommandManager {
         String labelName = commandManager.getLabelNameFromUser();
         int labelBands = commandManager.getSLabelBandsFromUser();
         Label label = new Label(labelName, labelBands);
-
 
         return new MusicBand.CardBuilder()
                 .setId(id)

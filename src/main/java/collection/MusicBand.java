@@ -17,6 +17,10 @@ public class MusicBand {
     private MusicGenre genre;
     private Label label;
 
+    public MusicBand() {
+    }
+
+
     public Long getId() {
         return this.id;
     }

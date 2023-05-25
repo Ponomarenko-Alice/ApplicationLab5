@@ -1,4 +1,4 @@
-package data;
+package commands;
 import com.opencsv.CSVWriter;
 
 import java.io.FileWriter;
