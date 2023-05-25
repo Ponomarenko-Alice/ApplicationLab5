@@ -26,7 +26,6 @@ public class CommandManager {
         } else {
             String param = Arrays.stream(params).toList().get(0);
             if (this.checkLongFormat(param) && this.checkUniqueId(param, collectionOfMusicBand)) {
-                System.out.println("good id");
                 return Long.parseLong(param);
             } else {
                 if (!this.checkLongFormat(param)) {
@@ -40,7 +39,7 @@ public class CommandManager {
         }
     }
 
-    private Boolean checkUniqueId(String str, CollectionOfMusicBand collectionOfMusicBand) throws NumberFormatException {
+    private Boolean checkUniqueId(String str, CollectionOfMusicBand collectionOfMusicBand) {
         boolean flag = true;
         try {
             Long id = Long.parseLong(str);
