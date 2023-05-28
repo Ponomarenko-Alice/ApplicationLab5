@@ -17,6 +17,8 @@ public class CommandSet {
         commands.put("insert", new InsertCommand(collectionOfMusicBand, this));
         commands.put("remove_key", new RemoveKeyCommand(collectionOfMusicBand, this));
         commands.put("remove_lower", new RemoveLowerCommand(collectionOfMusicBand, this));
+        commands.put("remove_greater_key", new RemoveGreaterKey(collectionOfMusicBand, this));
+
 
     }
 
