@@ -4,8 +4,8 @@ import collection.CollectionOfMusicBand;
 
 import java.util.Arrays;
 
-public class RemoveGreaterKey extends Command {
-    public RemoveGreaterKey(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+public class RemoveGreaterCommand extends Command {
+    public RemoveGreaterCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
         super(collectionOfMusicBand, commands, params);
     }
 
