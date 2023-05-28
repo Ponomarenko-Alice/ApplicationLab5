@@ -1,15 +1,12 @@
 package commands;
 
 import collection.CollectionOfMusicBand;
-
 import java.util.LinkedHashMap;
 
 public class CommandSet {
-    private CollectionOfMusicBand collectionOfMusicBand;
     private final LinkedHashMap<String, Command> commands;
 
     public CommandSet(CollectionOfMusicBand collectionOfMusicBand) {
-        this.collectionOfMusicBand = collectionOfMusicBand;
         this.commands = new LinkedHashMap<>();
         commands.put("help", new HelpCommand(null, this));
         commands.put("info", new InfoCommand(collectionOfMusicBand, this));
@@ -19,10 +16,9 @@ public class CommandSet {
         commands.put("history", new HistoryCommand(null, this));
         commands.put("insert", new InsertCommand(collectionOfMusicBand, this));
         commands.put("remove_key", new RemoveKeyCommand(collectionOfMusicBand, this));
-
+        commands.put("remove_lower", new RemoveLowerCommand(collectionOfMusicBand, this));
 
     }
-
 
     public LinkedHashMap<String, Command> getCommandSet() {
         return commands;
