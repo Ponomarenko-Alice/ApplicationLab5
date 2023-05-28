@@ -1,9 +1,6 @@
 package commands;
 
-import collection.CollectionOfMusicBand;
-import collection.Coordinates;
-import collection.Label;
-import collection.MusicBand;
+import collection.*;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;
@@ -211,6 +208,28 @@ public class CommandManager {
         }
     }
 
+    public MusicGenre getMusicGenreFromUser() {
+        System.out.println("Choose one of the items. Enter number");
+        System.out.println("1) PSYCHEDELIC_CLOUD_RAP \n2) SOUL \n3) POST_PUNK");
+        Scanner in = new Scanner(System.in);
+
+        while (true) {
+            String line = in.nextLine();
+            switch (line.trim()) {
+                case "1":
+                    return MusicGenre.PSYCHEDELIC_CLOUD_RAP;
+                case "2":
+                    return MusicGenre.SOUL;
+                case "3":
+                    return MusicGenre.POST_PUNK;
+                default:
+                    System.out.println("Enter number one of: \n1) PSYCHEDELIC_CLOUD_RAP \n2) SOUL \n3) POST_PUNK");
+            }
+        }
+
+
+    }
+
     public String getLabelNameFromUser() {
         System.out.println("Enter label name. It may be null");
         Scanner in = new Scanner(System.in);
@@ -251,6 +270,7 @@ public class CommandManager {
         Long numberOfParticipant = commandManager.getNumberOfParticipantFromUser();
         int singleCount = commandManager.getSingleCountFromUser();
         Integer albumCount = commandManager.getAlbumCountFromUser();
+        MusicGenre musicGenre = commandManager.getMusicGenreFromUser();
         String labelName = commandManager.getLabelNameFromUser();
         int labelBands = commandManager.getSLabelBandsFromUser();
         Label label = new Label(labelName, labelBands);
@@ -263,6 +283,7 @@ public class CommandManager {
                 .setNumberOfParticipants(numberOfParticipant)
                 .setSinglesCount(singleCount)
                 .setAlbumCount(albumCount)
+                .setGenre(musicGenre)
                 .setLabel(label)
                 .build();
     }

@@ -19,7 +19,6 @@ public class CommandSet {
         commands.put("remove_lower", new RemoveLowerCommand(collectionOfMusicBand, this));
         commands.put("remove_greater_key", new RemoveGreaterCommand(collectionOfMusicBand, this));
 
-
     }
 
     public LinkedHashMap<String, Command> getCommandSet() {
