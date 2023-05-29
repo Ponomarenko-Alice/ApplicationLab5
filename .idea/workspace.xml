@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add CountLessThanGenre class">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add UpdateIdClass class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" afterDir="false" />
     </list>
@@ -324,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685380386829</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Add UpdateIdClass class">
+      <created>1685393991204</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1685393991204</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -351,7 +358,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add ParserCSV class" />
     <MESSAGE value="Add ShowCommand" />
     <MESSAGE value="Add ClearCommand" />
     <MESSAGE value="Add exception to Executor" />
@@ -376,7 +382,8 @@
     <MESSAGE value="Refactoring CommandManager class&#10;-delete repeated creation Scanner" />
     <MESSAGE value="Add GroupByNameCommand" />
     <MESSAGE value="Add CountLessThanGenre class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add CountLessThanGenre class" />
+    <MESSAGE value="Add UpdateIdClass class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add UpdateIdClass class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
