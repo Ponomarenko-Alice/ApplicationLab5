@@ -10,11 +10,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CommandManager {
+    Scanner in;
 
-    public CommandManager() {}
+    public CommandManager() {
+        this.in = new Scanner(System.in);
+    }
 
     public Long getIdFromUserToSet(CollectionOfMusicBand collectionOfMusicBand, String[] params) {
-        Scanner in = new Scanner(System.in);
         if (params.length == 0) {
             System.out.println("Id will be generated");
             IdGenerator idGenerator = new IdGenerator(collectionOfMusicBand);
@@ -34,9 +36,7 @@ public class CommandManager {
 
         }
     }
-    /*
-    @param String! Long
-     */
+
     public Boolean checkUniqueId(String str, CollectionOfMusicBand collectionOfMusicBand) {
         boolean flag = true;
         try {
@@ -92,7 +92,6 @@ public class CommandManager {
 
     public String getNameFromUser() {
         System.out.println("Enter name");
-        Scanner in = new Scanner(System.in);
         String line = in.nextLine();
         while (line == null || line.length() == 0) {
             System.out.println("Name can't be null. Enter again");
@@ -103,7 +102,6 @@ public class CommandManager {
 
     public Double getXFromUser() {
         System.out.println("Enter coordinate X");
-        Scanner in = new Scanner(System.in);
         while (true) {
             String line = in.nextLine();
             while (line == null || line.length() == 0) {
@@ -126,7 +124,6 @@ public class CommandManager {
 
     public int getYFromUser() {
         System.out.println("Enter coordinate Y");
-        Scanner in = new Scanner(System.in);
         while (true) {
             String line = in.nextLine();
             while (line == null || line.length() == 0) {
@@ -144,7 +141,6 @@ public class CommandManager {
 
     public Long getNumberOfParticipantFromUser() {
         System.out.println("Enter number of participant");
-        Scanner in = new Scanner(System.in);
         while (true) {
             String line = in.nextLine();
             while (line == null || line.length() == 0) {
@@ -166,7 +162,6 @@ public class CommandManager {
 
     public int getSingleCountFromUser() {
         System.out.println("Enter single count");
-        Scanner in = new Scanner(System.in);
         while (true) {
             String line = in.nextLine();
             while (line == null || line.length() == 0) {
@@ -188,7 +183,6 @@ public class CommandManager {
 
     public Integer getAlbumCountFromUser() {
         System.out.println("Enter album set");
-        Scanner in = new Scanner(System.in);
         while (true) {
             String line = in.nextLine();
             if (line == null || line.length() == 0) {
@@ -211,7 +205,6 @@ public class CommandManager {
     public MusicGenre getMusicGenreFromUser() {
         System.out.println("Choose one of the items. Enter number");
         System.out.println("1) PSYCHEDELIC_CLOUD_RAP \n2) SOUL \n3) POST_PUNK");
-        Scanner in = new Scanner(System.in);
 
         while (true) {
             String line = in.nextLine();
@@ -232,13 +225,11 @@ public class CommandManager {
 
     public String getLabelNameFromUser() {
         System.out.println("Enter label name. It may be null");
-        Scanner in = new Scanner(System.in);
         return in.nextLine();
     }
 
     public int getSLabelBandsFromUser() {
         System.out.println("Enter count of label bands");
-        Scanner in = new Scanner(System.in);
         while (true) {
             String line = in.nextLine();
             while (line == null || line.length() == 0) {
