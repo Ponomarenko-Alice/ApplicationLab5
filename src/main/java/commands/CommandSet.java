@@ -19,7 +19,7 @@ public class CommandSet {
         commands.put("remove_lower", new RemoveLowerCommand(collectionOfMusicBand, this));
         commands.put("remove_greater_key", new RemoveGreaterCommand(collectionOfMusicBand, this));
         commands.put("remove_all_by_genre", new RemoveAllByGenre(collectionOfMusicBand, this));
-
+        commands.put("group_counting_by_name", new GroupByNameCommand(collectionOfMusicBand, this));
 
     }
 

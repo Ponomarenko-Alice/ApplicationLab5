@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add RemoveAllByGenre class">
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CommandManager.java" afterDir="false" />
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Refactoring CommandManager class&#10;-delete repeated creation Scanner">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685350011225</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Refactoring CommandManager class&#10;-delete repeated creation Scanner">
+      <created>1685351094003</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1685351094003</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -329,7 +337,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Problem with Parsing" />
     <MESSAGE value="Parse in Main&#10;-parse all fields except inner classes" />
     <MESSAGE value="Parse in Main&#10;-parse all fields except inner classes&#10;-It doesn't works with @CsvBindByPosition(LocalDate)" />
     <MESSAGE value="Add ParserCSV class" />
@@ -354,7 +361,8 @@
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Add functional for an enum field in collection" />
     <MESSAGE value="Add RemoveAllByGenre class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add RemoveAllByGenre class" />
+    <MESSAGE value="Refactoring CommandManager class&#10;-delete repeated creation Scanner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring CommandManager class&#10;-delete repeated creation Scanner" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -363,21 +371,6 @@
           <properties class="java.lang.ClassNotFoundException" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.4/lib/src.zip!/java.base/java/util/LinkedHashMap.java</url>
-          <line>754</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.4/lib/src.zip!/java.base/java/util/LinkedHashMap.java</url>
-          <line>745</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.4/lib/src.zip!/java.base/java/util/LinkedHashMap.java</url>
-          <line>744</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
