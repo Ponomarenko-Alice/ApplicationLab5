@@ -16,10 +16,12 @@ public class CommandSet {
         commands.put("history", new HistoryCommand(null, this));
         commands.put("insert", new InsertCommand(collectionOfMusicBand, this));
         commands.put("remove_key", new RemoveKeyCommand(collectionOfMusicBand, this));
-        commands.put("remove_lower", new RemoveLowerCommand(collectionOfMusicBand, this));
+        commands.put("remove_lower", new RemoveLowerKeyCommand(collectionOfMusicBand, this));
         commands.put("remove_greater_key", new RemoveGreaterCommand(collectionOfMusicBand, this));
         commands.put("remove_all_by_genre", new RemoveAllByGenre(collectionOfMusicBand, this));
         commands.put("group_counting_by_name", new GroupByNameCommand(collectionOfMusicBand, this));
+        commands.put("count_less_than_genre", new CountLessThanGenre(collectionOfMusicBand, this));
+
 
     }
 

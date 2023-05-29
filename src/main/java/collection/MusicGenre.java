@@ -5,6 +5,8 @@ public enum MusicGenre {
     SOUL(),
     POST_PUNK();
 
+    public boolean name;
+
     MusicGenre() {
     }
 

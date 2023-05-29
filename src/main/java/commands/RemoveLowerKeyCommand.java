@@ -4,9 +4,9 @@ import collection.CollectionOfMusicBand;
 import java.util.Arrays;
 
 
-public class RemoveLowerCommand extends Command{
+public class RemoveLowerKeyCommand extends Command{
 
-    public RemoveLowerCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+    public RemoveLowerKeyCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
         super(collectionOfMusicBand, commands, params);
     }
 
