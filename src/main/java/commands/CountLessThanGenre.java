@@ -22,10 +22,9 @@ public class CountLessThanGenre extends Command{
                 break;
             }
         }
-
 //        boolean isPresent = Arrays.stream(MusicGenre.values()).anyMatch(element -> param.equals(element.name));
 //        System.out.println(isPresent);
-        if (params == null || params.length == 0 || flag ) {
+        if (params.length == 0 || flag) {
             System.out.println("Enter one of 'PSYCHEDELIC_CLOUD_RAP', 'SOUL', 'POST_PUNK'");
         } else {
 

@@ -7,7 +7,7 @@ import java.io.*;
 import java.util.List;
 
 public class ParserCSV {
-    private File file;
+    private final File file;
 
     public ParserCSV(File file) {
         this.file = file;
@@ -33,13 +33,13 @@ public class ParserCSV {
                         .build();
                 return cb.parse();
 
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+
+        } catch (FileNotFoundException e) {
+                e.printStackTrace();
             }
-        } catch (FileNotFoundException ignored) {
 
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return null;
     }

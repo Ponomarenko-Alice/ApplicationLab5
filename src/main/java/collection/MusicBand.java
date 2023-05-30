@@ -25,35 +25,15 @@ public class MusicBand {
         return this.id;
     }
 
-    public Long setId(Long id) {
-        this.id = id;
-        return id;
-    }
-
     public String getName() {
         return this.name;
-    }
-
-    public String setName(String name) {
-        this.name = name;
-        return name;
     }
 
     public Coordinates getCoordinates() {
         return this.coordinates;
     }
 
-    public Coordinates setCoordinates(Coordinates coordinates) {
-        this.coordinates = coordinates;
-        return coordinates;
-    }
-
     public LocalDate getCreationDate() {
-        return creationDate;
-    }
-
-    public LocalDate setCreationDate(LocalDate creationDate) {
-        this.creationDate = creationDate;
         return creationDate;
     }
 
@@ -61,45 +41,20 @@ public class MusicBand {
         return numberOfParticipants;
     }
 
-    public Long setNumberOfParticipants(Long numberOfParticipants) {
-        this.numberOfParticipants = numberOfParticipants;
-        return numberOfParticipants;
-    }
-
     public int getSinglesCount() {
         return this.singlesCount;
-    }
-
-    public int setSinglesCount(int singlesCount) {
-        this.singlesCount = singlesCount;
-        return singlesCount;
     }
 
     public Integer getAlbumsCount() {
         return this.albumsCount;
     }
 
-    public Integer setAlbumCount(Integer albumsCount) {
-        this.albumsCount = albumsCount;
-        return albumsCount;
-    }
-
     public MusicGenre getGenre() {
         return this.genre;
     }
 
-    public MusicGenre setGenre(MusicGenre genre) {
-        this.genre = genre;
-        return genre;
-    }
-
     public Label getLabel() {
         return this.label;
-    }
-
-    public Label setLabel(Label label) {
-        this.label = label;
-        return label;
     }
 
     public MusicBand(CardBuilder cardBuilder) {
@@ -179,6 +134,4 @@ public class MusicBand {
 
         }
     }
-
-
 }
