@@ -46,10 +46,14 @@ public class SaveCommand extends Command {
     }
 
     @Override
-    public void execute() throws IOException {
-        WriterCSV writerCSV = new WriterCSV("out.csv", stringFieldsList);
-        writerCSV.writeToFile();
-        System.out.println("The collection was saved successfully to file " + writerCSV.getFileName());
+    public void execute() {
+        try {
+            WriterCSV writerCSV = new WriterCSV("out.csv", stringFieldsList);
+            writerCSV.writeToFile();
+            System.out.println("The collection was saved successfully to file " + writerCSV.getFileName());
+        } catch (IOException e) {
+            System.out.println("File not found");
+        }
     }
 
     @Override
