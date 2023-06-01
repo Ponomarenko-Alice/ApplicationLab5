@@ -1,9 +1,10 @@
 package commands;
 
 import collection.CollectionOfMusicBand;
+
 import java.util.Arrays;
 
-public class RemoveKeyCommand  extends Command{
+public class RemoveKeyCommand extends Command {
 
     public RemoveKeyCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
         super(collectionOfMusicBand, commands, params);
@@ -29,6 +30,7 @@ public class RemoveKeyCommand  extends Command{
             }
         }
     }
+
     @Override
     public String getName() {
         return "remove_key";
@@ -36,5 +38,6 @@ public class RemoveKeyCommand  extends Command{
 
     @Override
     public String getDescription() {
-        return " deletes a collection item by its key";}
+        return " deletes a collection item by its key";
+    }
 }

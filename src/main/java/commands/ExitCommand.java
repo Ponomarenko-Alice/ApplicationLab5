@@ -2,7 +2,7 @@ package commands;
 
 import collection.CollectionOfMusicBand;
 
-public class ExitCommand extends Command{
+public class ExitCommand extends Command {
     public ExitCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
         super(collectionOfMusicBand, commands, params);
     }
@@ -10,7 +10,7 @@ public class ExitCommand extends Command{
     @Override
     public void execute() {
         System.out.println("Bye :З");
-       System.exit(0);
+        System.exit(0);
     }
 
     @Override

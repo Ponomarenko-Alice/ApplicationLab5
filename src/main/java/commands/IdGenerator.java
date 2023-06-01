@@ -7,6 +7,7 @@ import java.time.Instant;
 
 public class IdGenerator {
     CollectionOfMusicBand collection;
+
     public IdGenerator(CollectionOfMusicBand collectionOfMusicBand) {
         this.collection = collectionOfMusicBand;
     }

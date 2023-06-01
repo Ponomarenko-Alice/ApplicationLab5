@@ -3,11 +3,12 @@ package commands;
 import collection.CollectionOfMusicBand;
 import collection.MusicBand;
 import collection.MusicGenre;
+
 import java.util.Arrays;
 import java.util.Map;
 
 
-public class CountLessThanGenre extends Command{
+public class CountLessThanGenre extends Command {
     public CountLessThanGenre(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
         super(collectionOfMusicBand, commands, params);
     }

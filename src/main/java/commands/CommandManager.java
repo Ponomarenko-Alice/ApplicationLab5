@@ -67,7 +67,7 @@ public class CommandManager {
         }
         return flag;
     }
-    
+
 
     private Long whileBlock(@NotNull Scanner in, CollectionOfMusicBand collectionOfMusicBand) {
         while (true) {

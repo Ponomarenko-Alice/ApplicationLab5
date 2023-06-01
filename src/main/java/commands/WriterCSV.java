@@ -1,4 +1,5 @@
 package commands;
+
 import com.opencsv.CSVWriter;
 
 import java.io.FileWriter;
@@ -7,8 +8,8 @@ import java.util.List;
 
 public class WriterCSV {
 
-    private String fileName;
-    private List<String[]> list;
+    private final String fileName;
+    private final List<String[]> list;
 
     public WriterCSV(String fileName, List<String[]> list) {
         this.fileName = fileName;
@@ -27,6 +28,8 @@ public class WriterCSV {
         fileWriter.close();
     }
 
-    public String getFileName() {return fileName;}
+    public String getFileName() {
+        return fileName;
+    }
 
 }

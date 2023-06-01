@@ -1,16 +1,16 @@
 package commands;
 
 import collection.CollectionOfMusicBand;
+
 import java.util.LinkedList;
 
 public class HistoryCommand extends Command {
 
 
-    private LinkedList<String> history;
+    private final LinkedList<String> history;
 
     {
-        LinkedList<String> history1 = new LinkedList<>();
-        this.history = history1;
+        this.history = new LinkedList<>();
     }
 
     public HistoryCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
@@ -22,7 +22,6 @@ public class HistoryCommand extends Command {
     }
 
 
-
     @Override
     public void execute() {
         if (history.size() <= 7) {
@@ -30,7 +29,7 @@ public class HistoryCommand extends Command {
                 System.out.println(command);
             }
         } else {
-            for(int i = 0; i < 7; i++) {
+            for (int i = 0; i < 7; i++) {
                 System.out.println(history.get(i));
             }
         }

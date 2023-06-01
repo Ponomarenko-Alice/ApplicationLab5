@@ -12,7 +12,7 @@ import static org.apache.commons.lang3.ArrayUtils.remove;
 public class Executor {
     private final InputStream input;
     private final File file;
-    private CollectionOfMusicBand collectionOfMusicBand;
+    private final CollectionOfMusicBand collectionOfMusicBand;
     CommandSet commandSet;
 
 
@@ -21,6 +21,7 @@ public class Executor {
         this.collectionOfMusicBand = collectionOfMusicBand;
         this.file = file;
     }
+
 
     private void fillCollectionMusicBand() {
         ParserCSV parser = new ParserCSV(file);

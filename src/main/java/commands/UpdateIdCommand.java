@@ -35,6 +35,7 @@ public class UpdateIdCommand extends Command {
             }
         }
     }
+
     @Override
     public String getName() {
         return "update_id";
@@ -42,5 +43,6 @@ public class UpdateIdCommand extends Command {
 
     @Override
     public String getDescription() {
-        return " update card by its key";}
+        return " update card by its key";
+    }
 }
