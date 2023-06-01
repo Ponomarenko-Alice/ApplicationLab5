@@ -12,6 +12,7 @@ public class Executor {
     private final InputStream input;
     private final File file;
     private CollectionOfMusicBand collectionOfMusicBand;
+    CommandSet commandSet;
 
 
     public Executor(InputStream inputStream, CollectionOfMusicBand collectionOfMusicBand, File file) {
@@ -27,35 +28,39 @@ public class Executor {
         }
     }
 
+    public void executeLine(String line) {
+        try {
+            if (line != null) {
+                String[] tokens = line.trim().split("\\s+");
+
+                Command command = commandSet.getCommandSet().get(tokens[0]);
+                String[] params = remove(tokens, 0);
+                if (params.length != 0) {
+                    command.setParams(params);
+                }
+                command.execute();
+
+                HistoryCommand historyCommand1 = (HistoryCommand) commandSet.getCommandSet().get("history");
+                historyCommand1.addCommandToHistory(tokens[0]);
+            } else {
+                System.out.println("line is null");
+            }
+        } catch (NullPointerException e) {
+            System.out.println("Non-existed command. Try 'help' command for available commands.");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public void start() {
         this.fillCollectionMusicBand();
+        this.commandSet = new CommandSet(this.collectionOfMusicBand);
 
         Scanner scanner = new Scanner(input);
-        CommandSet commandSet = new CommandSet(this.collectionOfMusicBand);
 
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
-            try {
-                if (line != null) {
-                    String[] tokens = line.trim().split("\\s+");
-
-                    Command command = commandSet.getCommandSet().get(tokens[0]);
-                    String[] params = remove(tokens, 0);
-                    if (params.length != 0) {
-                        command.setParams(params);
-                    }
-                    command.execute();
-
-                    HistoryCommand historyCommand1 = (HistoryCommand) commandSet.getCommandSet().get("history");
-                    historyCommand1.addCommandToHistory(tokens[0]);
-                } else {
-                    System.out.println("line is null");
-                }
-            } catch (NullPointerException e) {
-                System.out.println("Non-existed command. Try 'help' command for available commands.");
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            this.executeLine(line);
         }
     }
 }

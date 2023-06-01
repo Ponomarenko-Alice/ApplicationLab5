@@ -10,7 +10,6 @@ public class MusicBand {
     private Coordinates coordinates;
     @CsvDate(value = "yyyy-MM-dd")
     private LocalDate creationDate;
-
     private Long numberOfParticipants;
     private int singlesCount;
     private Integer albumsCount;
@@ -19,7 +18,6 @@ public class MusicBand {
 
     public MusicBand() {
     }
-
 
     public Long getId() {
         return this.id;

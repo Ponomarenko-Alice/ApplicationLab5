@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add exit command class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Executor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ParserCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParserCSV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/MusicBand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CountLessThanGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CountLessThanGenre.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
