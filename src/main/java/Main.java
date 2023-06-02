@@ -1,5 +1,5 @@
 import collection.CollectionOfMusicBand;
-import commands.Executor;
+import cmd.Executor;
 
 import java.io.File;
 

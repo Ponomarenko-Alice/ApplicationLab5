@@ -1,7 +1,11 @@
-package commands;
+package cmd;
 
 import collection.CollectionOfMusicBand;
 import collection.MusicBand;
+import commands.Command;
+import commands.CommandSet;
+import commands.HistoryCommand;
+
 import java.io.*;
 import java.util.Scanner;
 

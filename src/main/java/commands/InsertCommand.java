@@ -1,5 +1,6 @@
 package commands;
 
+import cmd.CommandManager;
 import collection.CollectionOfMusicBand;
 import collection.MusicBand;
 

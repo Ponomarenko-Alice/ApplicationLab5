@@ -1,4 +1,4 @@
-package commands;
+package cmd;
 
 import com.opencsv.CSVWriter;
 

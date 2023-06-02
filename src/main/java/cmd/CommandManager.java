@@ -1,6 +1,7 @@
-package commands;
+package cmd;
 
 import collection.*;
+import commands.IdGenerator;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;

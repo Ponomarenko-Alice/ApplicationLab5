@@ -1,4 +1,4 @@
-package commands;
+package cmd;
 
 import collection.MusicBand;
 import com.opencsv.bean.ColumnPositionMappingStrategy;
