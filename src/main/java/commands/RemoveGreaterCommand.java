@@ -37,6 +37,6 @@ public class RemoveGreaterCommand extends Command {
 
     @Override
     public String getDescription() {
-        return " deletes a collection item by its key if one is greater parameter";
+        return " delete a collection item by its key if one is greater parameter";
     }
 }

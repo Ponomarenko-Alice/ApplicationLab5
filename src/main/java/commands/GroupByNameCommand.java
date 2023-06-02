@@ -37,6 +37,6 @@ public class GroupByNameCommand extends Command {
 
     @Override
     public String getDescription() {
-        return " groups cards by name and shows the number in each of them ";
+        return " group cards by name and shows the number in each of them ";
     }
 }

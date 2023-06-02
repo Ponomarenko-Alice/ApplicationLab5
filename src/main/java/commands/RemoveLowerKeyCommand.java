@@ -39,7 +39,7 @@ public class RemoveLowerKeyCommand extends Command {
 
     @Override
     public String getDescription() {
-        return " deletes a collection item by its key if one is lower parameter";
+        return " delete a collection item by its key if one is lower parameter";
     }
 }
 

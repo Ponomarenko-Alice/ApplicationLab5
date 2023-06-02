@@ -27,6 +27,6 @@ public class InsertCommand extends Command {
 
     @Override
     public String getDescription() {
-        return " adds new card to collection.";
+        return " add new card to collection.";
     }
 }

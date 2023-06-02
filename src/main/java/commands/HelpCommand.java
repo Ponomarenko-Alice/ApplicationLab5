@@ -26,6 +26,6 @@ public class HelpCommand extends Command {
 
     @Override
     public String getDescription() {
-        return " shows help for available commands.";
+        return " show help for available commands.";
     }
 }

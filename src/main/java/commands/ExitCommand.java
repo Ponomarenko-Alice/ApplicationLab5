@@ -20,6 +20,6 @@ public class ExitCommand extends Command {
 
     @Override
     public String getDescription() {
-        return " exits the program";
+        return " exit the program";
     }
 }

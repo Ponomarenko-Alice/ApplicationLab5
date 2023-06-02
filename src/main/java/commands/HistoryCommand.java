@@ -42,6 +42,6 @@ public class HistoryCommand extends Command {
 
     @Override
     public String getDescription() {
-        return " shows last 7 commands.";
+        return " show last 7 commands.";
     }
 }

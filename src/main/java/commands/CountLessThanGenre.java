@@ -51,6 +51,6 @@ public class CountLessThanGenre extends Command {
 
     @Override
     public String getDescription() {
-        return " counts cards, where genre less than given ";
+        return " count cards, where genre less than given ";
     }
 }

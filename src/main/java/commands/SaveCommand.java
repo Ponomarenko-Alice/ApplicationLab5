@@ -64,7 +64,7 @@ public class SaveCommand extends Command {
 
     @Override
     public String getDescription() {
-        return " saves all changes.";
+        return " save all changes.";
     }
 
 }

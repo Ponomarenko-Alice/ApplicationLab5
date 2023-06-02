@@ -38,6 +38,6 @@ public class RemoveKeyCommand extends Command {
 
     @Override
     public String getDescription() {
-        return " deletes a collection item by its key";
+        return " delete a collection item by its key";
     }
 }

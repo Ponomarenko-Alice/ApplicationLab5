@@ -24,6 +24,6 @@ public class InfoCommand extends Command {
 
     @Override
     public String getDescription() {
-        return " gets information about the type of collection.";}
+        return " get information about the type of collection.";}
 
 }

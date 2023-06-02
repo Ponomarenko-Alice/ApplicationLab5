@@ -41,6 +41,6 @@ public class ShowCommand extends Command {
 
     @Override
     public String getDescription() {
-        return " shows cards from collection.";
+        return " show cards from collection.";
     }
 }

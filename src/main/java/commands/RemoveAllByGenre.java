@@ -44,6 +44,6 @@ public class RemoveAllByGenre extends Command {
 
     @Override
     public String getDescription() {
-        return " deletes a collection item by its genre";
+        return " delete a collection item by its genre";
     }
 }
