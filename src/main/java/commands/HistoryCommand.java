@@ -13,8 +13,8 @@ public class HistoryCommand extends Command {
         this.history = new LinkedList<>();
     }
 
-    public HistoryCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
-        super(collectionOfMusicBand, commands);
+    public HistoryCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
+        super(name, description, collectionOfMusicBand, commands);
     }
 
     public void addCommandToHistory(String string) {
@@ -33,15 +33,5 @@ public class HistoryCommand extends Command {
                 System.out.println(history.get(i));
             }
         }
-    }
-
-    @Override
-    public String getName() {
-        return "history";
-    }
-
-    @Override
-    public String getDescription() {
-        return " show last 7 commands.";
     }
 }

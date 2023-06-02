@@ -12,8 +12,8 @@ import java.util.List;
 public class SaveCommand extends Command {
     private List<String[]> stringFieldsList;
 
-    public SaveCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
-        super(collectionOfMusicBand, commands);
+    public SaveCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
+        super(name, description, collectionOfMusicBand, commands);
     }
 
 
@@ -56,15 +56,4 @@ public class SaveCommand extends Command {
             System.out.println("File not found");
         }
     }
-
-    @Override
-    public String getName() {
-        return "save";
-    }
-
-    @Override
-    public String getDescription() {
-        return " save all changes.";
-    }
-
 }

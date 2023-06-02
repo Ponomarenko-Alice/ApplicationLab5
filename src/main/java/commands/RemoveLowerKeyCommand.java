@@ -7,8 +7,8 @@ import java.util.Arrays;
 
 public class RemoveLowerKeyCommand extends Command {
 
-    public RemoveLowerKeyCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(collectionOfMusicBand, commands, params);
+    public RemoveLowerKeyCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+        super(name, description, collectionOfMusicBand, commands, params);
     }
 
     @Override
@@ -30,16 +30,6 @@ public class RemoveLowerKeyCommand extends Command {
                 System.out.println("Param format must be int");
             }
         }
-    }
-
-    @Override
-    public String getName() {
-        return "remove_lower";
-    }
-
-    @Override
-    public String getDescription() {
-        return " delete a collection item by its key if one is lower parameter";
     }
 }
 

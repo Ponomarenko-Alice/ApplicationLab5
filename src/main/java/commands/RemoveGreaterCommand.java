@@ -5,8 +5,8 @@ import collection.CollectionOfMusicBand;
 import java.util.Arrays;
 
 public class RemoveGreaterCommand extends Command {
-    public RemoveGreaterCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(collectionOfMusicBand, commands, params);
+    public RemoveGreaterCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+        super(name, description, collectionOfMusicBand, commands, params);
     }
 
     @Override
@@ -28,15 +28,5 @@ public class RemoveGreaterCommand extends Command {
                 System.out.println("Param format must be int");
             }
         }
-    }
-
-    @Override
-    public String getName() {
-        return "remove_greater_key";
-    }
-
-    @Override
-    public String getDescription() {
-        return " delete a collection item by its key if one is greater parameter";
     }
 }

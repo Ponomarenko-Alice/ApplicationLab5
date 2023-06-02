@@ -6,8 +6,8 @@ import collection.MusicBand;
 
 public class ShowCommand extends Command {
 
-    public ShowCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
-        super(collectionOfMusicBand, commands);
+    public ShowCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
+        super(name, description, collectionOfMusicBand, commands);
     }
 
     @Override
@@ -31,16 +31,5 @@ public class ShowCommand extends Command {
         } else {
             System.out.println("Collection is empty");
         }
-
-    }
-
-    @Override
-    public String getName() {
-        return "show";
-    }
-
-    @Override
-    public String getDescription() {
-        return " show cards from collection.";
     }
 }

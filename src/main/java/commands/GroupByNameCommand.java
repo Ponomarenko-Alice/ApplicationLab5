@@ -6,8 +6,8 @@ import collection.MusicBand;
 import java.util.*;
 
 public class GroupByNameCommand extends Command {
-    public GroupByNameCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(collectionOfMusicBand, commands, params);
+    public GroupByNameCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+        super(name, description, collectionOfMusicBand, commands, params);
     }
 
     @Override
@@ -28,15 +28,5 @@ public class GroupByNameCommand extends Command {
             System.out.println(set.getKey() + ": " + set.getValue());
         }
 
-    }
-
-    @Override
-    public String getName() {
-        return "group_counting_by_name";
-    }
-
-    @Override
-    public String getDescription() {
-        return " group cards by name and shows the number in each of them ";
     }
 }

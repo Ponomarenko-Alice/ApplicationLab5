@@ -1,7 +1,6 @@
 package cmd;
 
 import collection.*;
-import commands.IdGenerator;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;
@@ -110,16 +109,11 @@ public class CommandManager {
                 line = in.nextLine();
             }
             try {
-                return parseToDouble(line);
+                return Double.parseDouble(line);
             } catch (NumberFormatException e) {
                 System.out.println("Format X must be Double");
             }
         }
-
-    }
-
-    private Double parseToDouble(String str) throws NumberFormatException {
-        return Double.parseDouble(str);
     }
 
 
@@ -220,8 +214,6 @@ public class CommandManager {
                     System.out.println("Enter number one of: \n1) PSYCHEDELIC_CLOUD_RAP \n2) SOUL \n3) POST_PUNK");
             }
         }
-
-
     }
 
     public String getLabelNameFromUser() {
@@ -279,6 +271,4 @@ public class CommandManager {
                 .setLabel(label)
                 .build();
     }
-
-
 }

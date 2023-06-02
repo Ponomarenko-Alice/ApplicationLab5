@@ -8,8 +8,8 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class ExecuteScriptCommand extends Command {
-    public ExecuteScriptCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(collectionOfMusicBand, commands, params);
+    public ExecuteScriptCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+        super(name, description, collectionOfMusicBand, commands, params);
     }
 
     @Override
@@ -29,15 +29,5 @@ public class ExecuteScriptCommand extends Command {
         } catch (IndexOutOfBoundsException e) {
             System.out.println("No file enter");
         }
-    }
-
-    @Override
-    public String getName() {
-        return "execute_script";
-    }
-
-    @Override
-    public String getDescription() {
-        return " execute commands from file.";
     }
 }

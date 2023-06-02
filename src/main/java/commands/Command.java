@@ -3,12 +3,15 @@ package commands;
 import collection.CollectionOfMusicBand;
 
 public abstract class Command {
+    protected String name;
+    protected String description;
     protected CollectionOfMusicBand collectionOfMusicBand;
     protected CommandSet commands;
     protected String[] params;
 
-
-    public Command(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+    public Command(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+        this.name = name;
+        this.description = description;
         this.collectionOfMusicBand = collectionOfMusicBand;
         this.commands = commands;
         this.params = params;
@@ -30,14 +33,13 @@ public abstract class Command {
         return "-" + "'" + this.getName() + "'" + this.getDescription();
     }
 
-    public void execute() {
-    }
+    public void execute() {}
 
     public String getName() {
-        return null;
+        return name;
     }
 
     public String getDescription() {
-        return null;
+        return description;
     }
 }

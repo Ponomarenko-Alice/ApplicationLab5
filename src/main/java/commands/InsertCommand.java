@@ -7,8 +7,8 @@ import collection.MusicBand;
 
 public class InsertCommand extends Command {
 
-    public InsertCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
-        super(collectionOfMusicBand, commands);
+    public InsertCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
+        super(name, description, collectionOfMusicBand, commands);
     }
 
     @Override
@@ -17,16 +17,5 @@ public class InsertCommand extends Command {
         MusicBand musicBand = commandManager.getNewCard(collectionOfMusicBand, params);
         collectionOfMusicBand.addMusicBand(musicBand.getId(), musicBand);
         System.out.println("Card done! Don't forget to save collection :)");
-    }
-
-
-    @Override
-    public String getName() {
-        return "insert";
-    }
-
-    @Override
-    public String getDescription() {
-        return " add new card to collection.";
     }
 }

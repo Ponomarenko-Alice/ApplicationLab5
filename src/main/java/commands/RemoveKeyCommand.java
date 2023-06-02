@@ -6,8 +6,8 @@ import java.util.Arrays;
 
 public class RemoveKeyCommand extends Command {
 
-    public RemoveKeyCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(collectionOfMusicBand, commands, params);
+    public RemoveKeyCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+        super(name, description, collectionOfMusicBand, commands, params);
     }
 
     @Override
@@ -29,15 +29,5 @@ public class RemoveKeyCommand extends Command {
                 System.out.println("Key format must be Long");
             }
         }
-    }
-
-    @Override
-    public String getName() {
-        return "remove_key";
-    }
-
-    @Override
-    public String getDescription() {
-        return " delete a collection item by its key";
     }
 }

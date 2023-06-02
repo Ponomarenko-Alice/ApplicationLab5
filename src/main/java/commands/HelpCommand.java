@@ -7,8 +7,8 @@ import java.util.Map;
 public class HelpCommand extends Command {
 
 
-    public HelpCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(collectionOfMusicBand, commands, params);
+    public HelpCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+        super(name, description, collectionOfMusicBand, commands, params);
     }
 
     @Override
@@ -17,15 +17,5 @@ public class HelpCommand extends Command {
         for (Map.Entry<String, Command> set : commands.getCommandSet().entrySet()) {
             System.out.println(set.getValue().getDescriptionCommand());
         }
-    }
-
-    @Override
-    public String getName() {
-        return "help";
-    }
-
-    @Override
-    public String getDescription() {
-        return " show help for available commands.";
     }
 }

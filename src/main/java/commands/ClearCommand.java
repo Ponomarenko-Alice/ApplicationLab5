@@ -4,8 +4,8 @@ import collection.CollectionOfMusicBand;
 
 public class ClearCommand extends Command {
 
-    public ClearCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commandSet, String... params) {
-        super(collectionOfMusicBand, commandSet, params);
+    public ClearCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commandSet, String... params) {
+        super(name, description, collectionOfMusicBand, commandSet, params);
     }
 
     @Override
@@ -16,16 +16,6 @@ public class ClearCommand extends Command {
             collectionOfMusicBand.getCollectionOfCards().clear();
             System.out.println("Collection is empty now");
         }
-    }
-
-    @Override
-    public String getName() {
-        return "clear";
-    }
-
-    @Override
-    public String getDescription() {
-        return " delete all music bands from collection.";
     }
 }
 

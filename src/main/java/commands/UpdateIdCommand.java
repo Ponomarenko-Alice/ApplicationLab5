@@ -6,8 +6,8 @@ import collection.MusicBand;
 import java.util.Arrays;
 
 public class UpdateIdCommand extends Command {
-    public UpdateIdCommand(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(collectionOfMusicBand, commands, params);
+    public UpdateIdCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+        super(name, description, collectionOfMusicBand, commands, params);
     }
 
     @Override
@@ -34,15 +34,5 @@ public class UpdateIdCommand extends Command {
                 System.out.println("Key format must be Long");
             }
         }
-    }
-
-    @Override
-    public String getName() {
-        return "update_id";
-    }
-
-    @Override
-    public String getDescription() {
-        return " update card by its key";
     }
 }

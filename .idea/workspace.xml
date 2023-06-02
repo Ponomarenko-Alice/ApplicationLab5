@@ -4,10 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Refactoring">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Problem with the FileNotFoundException at ExecuteScriptCommand">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/Executor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CountLessThanGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CountLessThanGenre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/GroupByNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/GroupByNameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/HistoryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/HistoryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/IdGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/IdGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveAllByGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveAllByGenre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveGreaterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveKeyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveKeyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveLowerKeyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveLowerKeyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/SaveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ShowCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/UpdateIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/UpdateIdCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,18 +55,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alicc/Downloads/commons-collections4-4.1.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/alicc/Downloads/commons-collections4-4.1.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alicc\IdeaProjects\ApplicationLab5\src" />
@@ -375,8 +393,26 @@
       <option name="project" value="LOCAL" />
       <updated>1685693253153</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Problem with the FileNotFoundException at ExecuteScriptCommand">
+      <created>1685700814882</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1685700814883</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -402,7 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add some functional to InsertCommand&#10;-check params(id)" />
     <MESSAGE value="Add check id in InsertCommand&#10;-the while-block was moved to a separate method, to be able called in the catch-block" />
     <MESSAGE value="Fix id check&#10;-now the extra spaces are removed from the param string" />
     <MESSAGE value="Fix id check &#10;-now the extra spaces are removed from the param string" />
@@ -427,7 +462,8 @@
     <MESSAGE value="Refactoring (format) +&#10;-made some fields final&#10;-" />
     <MESSAGE value="Refactoring (format) +&#10;-made some fields final" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Problem with the FileNotFoundException at ExecuteScriptCommand" />
+    <option name="LAST_COMMIT_MESSAGE" value="Problem with the FileNotFoundException at ExecuteScriptCommand" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -438,7 +474,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java</url>
-          <line>23</line>
+          <line>22</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

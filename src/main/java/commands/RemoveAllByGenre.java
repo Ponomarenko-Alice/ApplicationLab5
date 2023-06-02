@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class RemoveAllByGenre extends Command {
 
-    public RemoveAllByGenre(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(collectionOfMusicBand, commands, params);
+    public RemoveAllByGenre(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+        super(name, description, collectionOfMusicBand, commands, params);
     }
 
     @Override
@@ -35,15 +35,5 @@ public class RemoveAllByGenre extends Command {
                 System.out.println("No card with this genre in collection");
             }
         }
-    }
-
-    @Override
-    public String getName() {
-        return "remove_all_by_genre";
-    }
-
-    @Override
-    public String getDescription() {
-        return " delete a collection item by its genre";
     }
 }

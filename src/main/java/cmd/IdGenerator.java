@@ -1,4 +1,4 @@
-package commands;
+package cmd;
 
 import collection.CollectionOfMusicBand;
 import collection.MusicBand;

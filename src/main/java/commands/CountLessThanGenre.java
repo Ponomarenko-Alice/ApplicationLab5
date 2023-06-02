@@ -9,8 +9,8 @@ import java.util.Map;
 
 
 public class CountLessThanGenre extends Command {
-    public CountLessThanGenre(CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(collectionOfMusicBand, commands, params);
+    public CountLessThanGenre(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+        super(name, description, collectionOfMusicBand, commands, params);
     }
 
     @Override
@@ -23,8 +23,7 @@ public class CountLessThanGenre extends Command {
                 break;
             }
         }
-//        boolean isPresent = Arrays.stream(MusicGenre.values()).anyMatch(element -> param.equals(element.name));
-//        System.out.println(isPresent);
+
         if (params.length == 0 || flag) {
             System.out.println("Enter one of 'PSYCHEDELIC_CLOUD_RAP', 'SOUL', 'POST_PUNK'");
         } else {
@@ -42,15 +41,5 @@ public class CountLessThanGenre extends Command {
                 default -> System.out.println(count + " cards with genre less than current");
             }
         }
-    }
-
-    @Override
-    public String getName() {
-        return "count_less_than_genre";
-    }
-
-    @Override
-    public String getDescription() {
-        return " count cards, where genre less than given ";
     }
 }
