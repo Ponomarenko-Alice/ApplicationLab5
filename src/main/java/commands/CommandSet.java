@@ -20,6 +20,7 @@ public class CommandSet {
         commands.put("update_id", new UpdateIdCommand(collectionOfMusicBand, this));
         commands.put("remove_key", new RemoveKeyCommand(collectionOfMusicBand, this));
         commands.put("remove_lower", new RemoveLowerKeyCommand(collectionOfMusicBand, this));
+        commands.put("execute_script", new ExecuteScriptCommand(collectionOfMusicBand, this));
         commands.put("remove_greater_key", new RemoveGreaterCommand(collectionOfMusicBand, this));
         commands.put("remove_all_by_genre", new RemoveAllByGenre(collectionOfMusicBand, this));
         commands.put("count_less_than_genre", new CountLessThanGenre(collectionOfMusicBand, this));
