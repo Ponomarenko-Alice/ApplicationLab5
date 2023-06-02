@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class RemoveLowerKeyCommand extends Command {
 
-    public RemoveLowerKeyCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+    public RemoveLowerKeyCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
         super(name, description, collectionOfMusicBand, commands, params);
     }
 

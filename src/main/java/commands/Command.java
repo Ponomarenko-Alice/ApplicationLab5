@@ -33,7 +33,8 @@ public abstract class Command {
         return "-" + "'" + this.getName() + "'" + this.getDescription();
     }
 
-    public void execute() {}
+    public void execute() {
+    }
 
     public String getName() {
         return name;

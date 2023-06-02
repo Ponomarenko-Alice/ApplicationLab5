@@ -5,7 +5,7 @@ import collection.CollectionOfMusicBand;
 import java.util.Arrays;
 
 public class RemoveGreaterCommand extends Command {
-    public RemoveGreaterCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+    public RemoveGreaterCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
         super(name, description, collectionOfMusicBand, commands, params);
     }
 

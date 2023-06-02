@@ -6,7 +6,7 @@ import collection.MusicBand;
 import java.util.*;
 
 public class GroupByNameCommand extends Command {
-    public GroupByNameCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+    public GroupByNameCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
         super(name, description, collectionOfMusicBand, commands, params);
     }
 

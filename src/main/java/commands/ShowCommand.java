@@ -6,7 +6,7 @@ import collection.MusicBand;
 
 public class ShowCommand extends Command {
 
-    public ShowCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
+    public ShowCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
         super(name, description, collectionOfMusicBand, commands);
     }
 

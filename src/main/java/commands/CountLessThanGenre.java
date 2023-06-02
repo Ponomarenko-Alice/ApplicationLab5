@@ -9,7 +9,7 @@ import java.util.Map;
 
 
 public class CountLessThanGenre extends Command {
-    public CountLessThanGenre(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+    public CountLessThanGenre(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
         super(name, description, collectionOfMusicBand, commands, params);
     }
 

@@ -4,7 +4,7 @@ import collection.CollectionOfMusicBand;
 
 public class ClearCommand extends Command {
 
-    public ClearCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commandSet, String... params) {
+    public ClearCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commandSet, String... params) {
         super(name, description, collectionOfMusicBand, commandSet, params);
     }
 

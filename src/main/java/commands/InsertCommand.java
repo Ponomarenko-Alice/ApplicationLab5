@@ -7,7 +7,7 @@ import collection.MusicBand;
 
 public class InsertCommand extends Command {
 
-    public InsertCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
+    public InsertCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
         super(name, description, collectionOfMusicBand, commands);
     }
 

@@ -2,13 +2,14 @@ package commands;
 
 import cmd.Executor;
 import collection.CollectionOfMusicBand;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 
 public class ExecuteScriptCommand extends Command {
-    public ExecuteScriptCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+    public ExecuteScriptCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
         super(name, description, collectionOfMusicBand, commands, params);
     }
 
@@ -22,8 +23,7 @@ public class ExecuteScriptCommand extends Command {
                 System.out.println(line);
                 executor.executeLine(line);
             }
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
             System.out.println("File read error. Try different");
         } catch (IndexOutOfBoundsException e) {

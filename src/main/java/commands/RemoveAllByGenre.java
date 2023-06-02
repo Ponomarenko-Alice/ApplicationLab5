@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class RemoveAllByGenre extends Command {
 
-    public RemoveAllByGenre(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+    public RemoveAllByGenre(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
         super(name, description, collectionOfMusicBand, commands, params);
     }
 
