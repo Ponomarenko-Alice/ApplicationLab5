@@ -3,7 +3,6 @@ package commands;
 import cmd.CommandManager;
 import collection.CollectionOfMusicBand;
 import collection.MusicBand;
-
 import java.util.Arrays;
 
 public class UpdateIdCommand extends Command {

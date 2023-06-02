@@ -34,6 +34,8 @@ public class Executor {
 
     public void executeLine(String line) {
         try {
+            this.commandSet = new CommandSet(this.collectionOfMusicBand); //delete
+
             String[] tokens = line.trim().split("\\s+");
             Command command = commandSet.getCommandSet().get(tokens[0]);
             String[] params = remove(tokens, 0);
