@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Refactoring">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Remove string constant 'history' from method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/Executor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -394,7 +395,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685737625755</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Make method execute abstract">
+      <created>1685795583380</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1685795583380</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Put a magic number 7 to a constant at the class level">
+      <created>1685795984641</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1685795984641</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -432,9 +447,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix id check&#10;-now the extra spaces are removed from the param string" />
-    <MESSAGE value="Fix id check &#10;-now the extra spaces are removed from the param string" />
-    <MESSAGE value="refactoring" />
     <MESSAGE value="Add IdGenerator" />
     <MESSAGE value="Functional to Insert command&#10;-without enums" />
     <MESSAGE value="Functional to Insert command&#10;-without enums&#10;-many unused methods in MusicBand class(setters)" />
@@ -457,7 +469,10 @@
     <MESSAGE value="Problem with the FileNotFoundException at ExecuteScriptCommand" />
     <MESSAGE value="Remove getters from commands, create fields for name and description" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Make method execute abstract" />
+    <MESSAGE value="Put a magic number 7 to a constant at the class level" />
+    <MESSAGE value="Remove string constant 'history' from method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove string constant 'history' from method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -467,9 +482,14 @@
           <option name="timeStamp" value="4" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/src/main/java/commands/HistoryCommand.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/HistoryCommand.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

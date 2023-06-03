@@ -32,9 +32,12 @@ public class Executor {
         }
     }
 
-    public void executeLine(String line) {
+    public CommandSet getCommandSet() {
+        return commandSet;
+    }
+
+    public void executeLine(String line, CommandSet commandSet) {
         try {
-            this.commandSet = new CommandSet(this.collectionOfMusicBand); //delete
 
             String[] tokens = line.trim().split("\\s+");
             Command command = commandSet.getCommandSet().get(tokens[0]);
@@ -44,8 +47,13 @@ public class Executor {
             }
             command.execute();
 
-            HistoryCommand historyCommand1 = (HistoryCommand) commandSet.getCommandSet().get("history");
-            historyCommand1.addCommandToHistory(tokens[0]);
+            HistoryCommand historyCommand = commandSet.getCommandSet().values().stream()
+                    .filter(x -> x instanceof HistoryCommand)
+                    .map(x -> (HistoryCommand) x)
+                    .findFirst()
+                    .orElse(null);
+            assert historyCommand != null;
+            historyCommand.addCommandToHistory(tokens[0]);
 
         } catch (NullPointerException e) {
             System.out.println("Non-existed command. Try 'help' command for available commands.");
@@ -57,10 +65,12 @@ public class Executor {
         this.commandSet = new CommandSet(this.collectionOfMusicBand);
 
         Scanner scanner = new Scanner(input);
+        this.commandSet = new CommandSet(this.collectionOfMusicBand);
+
 
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
-            this.executeLine(line);
+            this.executeLine(line, commandSet);
         }
     }
 }

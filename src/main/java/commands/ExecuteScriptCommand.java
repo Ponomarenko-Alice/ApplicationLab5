@@ -2,7 +2,6 @@ package commands;
 
 import cmd.Executor;
 import collection.CollectionOfMusicBand;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -21,7 +20,7 @@ public class ExecuteScriptCommand extends Command {
             Executor executor = new Executor(null, collectionOfMusicBand, null);
             while ((line = bufferedReader.readLine()) != null) {
                 System.out.println(line);
-                executor.executeLine(line);
+                executor.executeLine(line, executor.getCommandSet());
             }
         } catch (IOException e) {
             e.printStackTrace();
