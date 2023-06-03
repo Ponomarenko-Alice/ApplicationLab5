@@ -3,8 +3,6 @@ package commands;
 import collection.CollectionOfMusicBand;
 import collection.MusicBand;
 import collection.MusicGenre;
-
-import java.util.Arrays;
 import java.util.Map;
 
 
@@ -15,31 +13,35 @@ public class CountLessThanGenre extends Command {
 
     @Override
     public void execute() {
-        String param = Arrays.stream(params).toList().get(0);
-        boolean flag = true;
-        for (MusicGenre enumName : MusicGenre.values()) {
-            if (param.equals(enumName.name())) {
-                flag = false;
-                break;
-            }
-        }
-
-        if (params.length == 0 || flag) {
-            System.out.println("Enter one of 'PSYCHEDELIC_CLOUD_RAP', 'SOUL', 'POST_PUNK'");
-        } else {
-
-            int count = 0;
-            for (Map.Entry<Long, MusicBand> entry : collectionOfMusicBand.getCollectionOfCards().entrySet()) {
-                MusicGenre genre = entry.getValue().getGenre();
-                if (genre.name().compareTo(param) < 0) {
-                    count++;
+        try {
+            String param = params[0];
+            boolean flag = true;
+            for (MusicGenre enumName : MusicGenre.values()) {
+                if (param.equals(enumName.name())) {
+                    flag = false;
+                    break;
                 }
             }
-            switch (count) {
-                case 0 -> System.out.println("No cards with genre less than current");
-                case 1 -> System.out.println("1 card with genre less than current");
-                default -> System.out.println(count + " cards with genre less than current");
+
+            if (flag) {
+                new EnumExistException().offerAvailableEnums();
+            } else {
+
+                int count = 0;
+                for (Map.Entry<Long, MusicBand> entry : collectionOfMusicBand.getCollectionOfCards().entrySet()) {
+                    MusicGenre genre = entry.getValue().getGenre();
+                    if (genre.name().compareTo(param) < 0) {
+                        count++;
+                    }
+                }
+                switch (count) {
+                    case 0 -> System.out.println("No cards with genre less than current");
+                    case 1 -> System.out.println("1 card with genre less than current");
+                    default -> System.out.println(count + " cards with genre less than current");
+                }
             }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            new EnumExistException().offerAvailableEnums();
         }
     }
 }
