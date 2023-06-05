@@ -8,8 +8,8 @@ public class ExitCommand extends Command {
     }
 
     @Override
-    public void execute() {
+    public void execute() throws ExitException {
         System.out.println("Bye :З");
-        System.exit(0);
+        throw new ExitException("Bye :З");
     }
 }

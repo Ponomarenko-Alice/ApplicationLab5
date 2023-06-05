@@ -13,7 +13,7 @@ public class ExecuteScriptCommand extends Command {
     }
 
     @Override
-    public void execute() {
+    public void execute() throws ExitException{
 
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(Arrays.stream(params).toList().get(0)))) {
             String line;

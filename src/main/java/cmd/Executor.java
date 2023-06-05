@@ -4,6 +4,7 @@ import collection.CollectionOfMusicBand;
 import collection.MusicBand;
 import commands.Command;
 import commands.CommandSet;
+import commands.ExitException;
 import commands.HistoryCommand;
 
 import java.io.*;
@@ -36,7 +37,7 @@ public class Executor {
         return commandSet;
     }
 
-    public void executeLine(String line, CommandSet commandSet) {
+    public void executeLine(String line, CommandSet commandSet) throws ExitException {
         try {
 
             String[] tokens = line.trim().split("\\s+");
@@ -52,11 +53,12 @@ public class Executor {
                     .map(x -> (HistoryCommand) x)
                     .findFirst()
                     .orElse(null);
-
             historyCommand.addCommandToHistory(tokens[0]);
 
         } catch (NullPointerException e) {
             System.out.println("Non-existed command. Try 'help' command for available commands.");
+        } catch (ExitException e) {
+            throw new ExitException("bye");
         }
     }
 
@@ -69,8 +71,12 @@ public class Executor {
 
 
         while (scanner.hasNextLine()) {
-            String line = scanner.nextLine();
-            this.executeLine(line, commandSet);
-        }
+            try {
+                String line = scanner.nextLine();
+                this.executeLine(line, commandSet);
+            } catch (ExitException e) {
+                break;
+            }
+         }
     }
 }
