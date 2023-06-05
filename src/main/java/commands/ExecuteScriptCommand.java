@@ -23,7 +23,6 @@ public class ExecuteScriptCommand extends Command {
                 executor.executeLine(line, executor.getCommandSet());
             }
         } catch (IOException e) {
-            e.printStackTrace();
             System.out.println("File read error. Try different");
         } catch (IndexOutOfBoundsException e) {
             System.out.println("No file enter");

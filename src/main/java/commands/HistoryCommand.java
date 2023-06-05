@@ -8,7 +8,6 @@ public class HistoryCommand extends Command {
 
 
     private final LinkedList<String> history;
-    private final int countOfCommands = 7;
 
     {
         this.history = new LinkedList<>();
@@ -24,12 +23,13 @@ public class HistoryCommand extends Command {
 
     @Override
     public void execute() {
+        int countOfCommands = 7;
         if (history.size() <= countOfCommands) {
             for (String command : history) {
                 System.out.println(command);
             }
         } else {
-            for (int i = 0; i < 7; i++) {
+            for (int i = 0; i < countOfCommands; i++) {
                 System.out.println(history.get(i));
             }
         }

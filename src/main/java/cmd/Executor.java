@@ -52,7 +52,7 @@ public class Executor {
                     .map(x -> (HistoryCommand) x)
                     .findFirst()
                     .orElse(null);
-            assert historyCommand != null;
+
             historyCommand.addCommandToHistory(tokens[0]);
 
         } catch (NullPointerException e) {
