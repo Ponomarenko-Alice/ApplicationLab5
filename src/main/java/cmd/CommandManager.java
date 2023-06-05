@@ -4,7 +4,6 @@ import collection.*;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -22,7 +21,7 @@ public class CommandManager {
             IdGenerator idGenerator = new IdGenerator(collectionOfMusicBand);
             return idGenerator.getUniqueId();
         } else {
-            String param = Arrays.stream(params).toList().get(0);
+            String param = params[0];
             if (this.checkLongFormat(param) && this.checkUniqueId(param, collectionOfMusicBand)) {
                 return Long.parseLong(param);
             } else {
