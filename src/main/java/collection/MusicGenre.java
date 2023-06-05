@@ -5,9 +5,9 @@ public enum MusicGenre {
     SOUL(2),
     POST_PUNK(3);
 
-    public final int number;
+    public final Integer number;
 
-    MusicGenre(int number) {
+    MusicGenre(Integer number) {
         this.number = number;
     }
 

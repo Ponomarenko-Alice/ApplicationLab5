@@ -200,20 +200,15 @@ public class CommandManager {
     public MusicGenre getMusicGenreFromUser() {
         System.out.println("Choose one of the items. Enter number");
         new EnumExistException().offerAvailableEnums();
-
         while (true) {
-            String line = in.nextLine();
-            switch (line.trim()) {
-                case "1":
-                    return MusicGenre.PSYCHEDELIC_CLOUD_RAP;
-                case "2":
-                    return MusicGenre.SOUL;
-                case "3":
-                    return MusicGenre.POST_PUNK;
-                default:
-                    System.out.println("Choose one of the items. Enter number");
-                    new EnumExistException().offerAvailableEnums();
+            String line = in.nextLine().trim();
+            for (MusicGenre genre : MusicGenre.values()) {
+                if ((genre.number.toString()).equals(line)) {
+                    return genre;
+                }
             }
+            System.out.println("Choose one of the items. Enter number");
+            new EnumExistException().offerAvailableEnums();
         }
     }
 
@@ -242,7 +237,6 @@ public class CommandManager {
             }
         }
     }
-
 
     public MusicBand getNewCard(CollectionOfMusicBand collectionOfMusicBand, String[] params) {
         CommandManager commandManager = new CommandManager();

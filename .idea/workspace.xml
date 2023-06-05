@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="params[0] instead Arrays.stream(params).toList().get(0)">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cmd/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CountLessThanGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CountLessThanGenre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/EnumExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/EnumExistException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collection/MusicGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/MusicGenre.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,13 +86,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676462150884</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Refactoring">
-      <created>1681131107908</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1681131107908</updated>
     </task>
     <task id="LOCAL-00003" summary="Refactoring Command and InfoCommand classes">
       <created>1681191615768</created>
@@ -431,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685973291335</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Refactoring">
+      <created>1685974260800</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1685974260800</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -487,14 +486,14 @@
     <MESSAGE value="Refactoring (format) +&#10;-made some fields final" />
     <MESSAGE value="Problem with the FileNotFoundException at ExecuteScriptCommand" />
     <MESSAGE value="Remove getters from commands, create fields for name and description" />
-    <MESSAGE value="Refactoring" />
     <MESSAGE value="Make method execute abstract" />
     <MESSAGE value="Put a magic number 7 to a constant at the class level" />
     <MESSAGE value="Remove string constant 'history' from method" />
     <MESSAGE value="Refactoring&#10;-delete assert from Executor&#10;-delete printStackTrace of exception in the ExecutorScript&#10;-Change magic number to constant in the HistoryCommand" />
     <MESSAGE value="Refactor exit command" />
     <MESSAGE value="params[0] instead Arrays.stream(params).toList().get(0)" />
-    <option name="LAST_COMMIT_MESSAGE" value="params[0] instead Arrays.stream(params).toList().get(0)" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
