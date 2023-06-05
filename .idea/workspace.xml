@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Refactor exit command">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="params[0] instead Arrays.stream(params).toList().get(0)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cmd/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CountLessThanGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CountLessThanGenre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/EnumExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/EnumExistException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,13 +87,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676462150884</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Added classes for storing collection">
-      <created>1677111064855</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1677111064855</updated>
     </task>
     <task id="LOCAL-00002" summary="Refactoring">
       <created>1681131107908</created>
@@ -428,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685972566502</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="params[0] instead Arrays.stream(params).toList().get(0)">
+      <created>1685973291334</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1685973291335</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -466,7 +469,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Functional to Insert command&#10;-without enums&#10;-many unused methods in MusicBand class(setters)" />
     <MESSAGE value="Method checkUniqueId doesn't trows exception now" />
     <MESSAGE value="Add remove command" />
     <MESSAGE value="Add RemoveLowerCommand" />
@@ -491,7 +493,8 @@
     <MESSAGE value="Remove string constant 'history' from method" />
     <MESSAGE value="Refactoring&#10;-delete assert from Executor&#10;-delete printStackTrace of exception in the ExecutorScript&#10;-Change magic number to constant in the HistoryCommand" />
     <MESSAGE value="Refactor exit command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor exit command" />
+    <MESSAGE value="params[0] instead Arrays.stream(params).toList().get(0)" />
+    <option name="LAST_COMMIT_MESSAGE" value="params[0] instead Arrays.stream(params).toList().get(0)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

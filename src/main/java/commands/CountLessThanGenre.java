@@ -24,6 +24,7 @@ public class CountLessThanGenre extends Command {
             }
 
             if (flag) {
+                System.out.println("Enter one of:");
                 new EnumExistException().offerAvailableEnums();
             } else {
 
@@ -41,6 +42,7 @@ public class CountLessThanGenre extends Command {
                 }
             }
         } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Enter one of:");
             new EnumExistException().offerAvailableEnums();
         }
     }

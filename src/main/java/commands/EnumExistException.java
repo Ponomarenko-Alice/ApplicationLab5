@@ -8,9 +8,11 @@ public class EnumExistException extends Exception {
 
 
     public void offerAvailableEnums() {
-        System.out.println("Enter one of:");
+        Integer number = 1;
         for (MusicGenre genre : MusicGenre.values()) {
-            System.out.println("- " + genre);
+            System.out.println(number + ") " + genre);
+            number++;
         }
     }
+
 }

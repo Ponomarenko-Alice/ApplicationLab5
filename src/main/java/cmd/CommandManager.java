@@ -1,6 +1,7 @@
 package cmd;
 
 import collection.*;
+import commands.EnumExistException;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;
@@ -22,12 +23,12 @@ public class CommandManager {
             return idGenerator.getUniqueId();
         } else {
             String param = params[0];
-            if (this.checkLongFormat(param) && this.checkUniqueId(param, collectionOfMusicBand)) {
+            if (checkLongFormat(param) && checkUniqueId(param, collectionOfMusicBand)) {
                 return Long.parseLong(param);
             } else {
-                if (!this.checkLongFormat(param)) {
+                if (!checkLongFormat(param)) {
                     System.out.println("Enter id in format 1-18 digits only. Try again or enter null");
-                } else if (!this.checkUniqueId(param, collectionOfMusicBand)) {
+                } else if (!checkUniqueId(param, collectionOfMusicBand)) {
                     System.out.println("This id already exists. Try again");
                 }
                 return this.whileBlock(in, collectionOfMusicBand);
@@ -71,16 +72,16 @@ public class CommandManager {
     private Long whileBlock(@NotNull Scanner in, CollectionOfMusicBand collectionOfMusicBand) {
         while (true) {
             String id = in.nextLine().trim();
-            if ((id.length() != 0) && this.checkLongFormat(id) && this.checkUniqueId(id, collectionOfMusicBand)) {
+            if ((id.length() != 0) && checkLongFormat(id) && checkUniqueId(id, collectionOfMusicBand)) {
                 return Long.parseLong(id);
             } else {
                 if (id.length() == 0) {
                     System.out.println("Id will be generated");
                     IdGenerator idGenerator = new IdGenerator(collectionOfMusicBand);
                     return idGenerator.getUniqueId();
-                } else if (!this.checkLongFormat(id)) {
+                } else if (!checkLongFormat(id)) {
                     System.out.println("Enter id in format 1-18 digits only. Try again or enter null");
-                } else if (!this.checkUniqueId(id, collectionOfMusicBand)) {
+                } else if (!checkUniqueId(id, collectionOfMusicBand)) {
                     System.out.println("This id already exists. Try again");
                 } else {
                     System.out.println("Bad id. Try again");
@@ -198,7 +199,7 @@ public class CommandManager {
 
     public MusicGenre getMusicGenreFromUser() {
         System.out.println("Choose one of the items. Enter number");
-        System.out.println("1) PSYCHEDELIC_CLOUD_RAP \n2) SOUL \n3) POST_PUNK");
+        new EnumExistException().offerAvailableEnums();
 
         while (true) {
             String line = in.nextLine();
@@ -210,7 +211,8 @@ public class CommandManager {
                 case "3":
                     return MusicGenre.POST_PUNK;
                 default:
-                    System.out.println("Enter number one of: \n1) PSYCHEDELIC_CLOUD_RAP \n2) SOUL \n3) POST_PUNK");
+                    System.out.println("Choose one of the items. Enter number");
+                    new EnumExistException().offerAvailableEnums();
             }
         }
     }
