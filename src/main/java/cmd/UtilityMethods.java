@@ -9,39 +9,39 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class CommandManager {
+public class UtilityMethods {
     Scanner in;
 
-    public CommandManager() {
+    public UtilityMethods() {
         this.in = new Scanner(System.in);
     }
 
-    public Long getIdFromUserToSet(CollectionOfMusicBand collectionOfMusicBand, String[] params) {
+    public Long getIdFromUserToSet(CollectionController collectionController, String[] params) {
         if (params.length == 0) {
             System.out.println("Id will be generated");
-            IdGenerator idGenerator = new IdGenerator(collectionOfMusicBand);
+            IdGenerator idGenerator = new IdGenerator(collectionController);
             return idGenerator.getUniqueId();
         } else {
             String param = params[0];
-            if (checkLongFormat(param) && checkUniqueId(param, collectionOfMusicBand)) {
+            if (checkLongFormat(param) && checkUniqueId(param, collectionController)) {
                 return Long.parseLong(param);
             } else {
                 if (!checkLongFormat(param)) {
                     System.out.println("Enter id in format 1-18 digits only. Try again or enter null");
-                } else if (!checkUniqueId(param, collectionOfMusicBand)) {
+                } else if (!checkUniqueId(param, collectionController)) {
                     System.out.println("This id already exists. Try again");
                 }
-                return this.whileBlock(in, collectionOfMusicBand);
+                return this.whileBlock(in, collectionController);
             }
 
         }
     }
 
-    public Boolean checkUniqueId(String str, CollectionOfMusicBand collectionOfMusicBand) {
+    public Boolean checkUniqueId(String str, CollectionController collectionController) {
         boolean flag = true;
         try {
             Long id = Long.parseLong(str);
-            for (MusicBand musicBand : collectionOfMusicBand.getCollectionOfCards().values()) {
+            for (MusicBand musicBand : collectionController.getCollectionOfCards().values()) {
                 if (id.equals(musicBand.getId())) {
                     flag = false;
                     break;
@@ -59,8 +59,8 @@ public class CommandManager {
      */
     public Boolean checkLongFormat(String str) {
         boolean flag = true;
-        String regex = "^[0-9]{1,18}$";
-        Pattern pattern = Pattern.compile(regex);
+        String longFormatRegex = "^[0-9]{1,18}$";
+        Pattern pattern = Pattern.compile(longFormatRegex);
         Matcher mather = pattern.matcher(str);
         if (!mather.matches()) {
             flag = false;
@@ -69,19 +69,19 @@ public class CommandManager {
     }
 
 
-    private Long whileBlock(@NotNull Scanner in, CollectionOfMusicBand collectionOfMusicBand) {
+    private Long whileBlock(@NotNull Scanner in, CollectionController collectionController) {
         while (true) {
             String id = in.nextLine().trim();
-            if ((id.length() != 0) && checkLongFormat(id) && checkUniqueId(id, collectionOfMusicBand)) {
+            if ((id.length() != 0) && checkLongFormat(id) && checkUniqueId(id, collectionController)) {
                 return Long.parseLong(id);
             } else {
                 if (id.length() == 0) {
                     System.out.println("Id will be generated");
-                    IdGenerator idGenerator = new IdGenerator(collectionOfMusicBand);
+                    IdGenerator idGenerator = new IdGenerator(collectionController);
                     return idGenerator.getUniqueId();
                 } else if (!checkLongFormat(id)) {
                     System.out.println("Enter id in format 1-18 digits only. Try again or enter null");
-                } else if (!checkUniqueId(id, collectionOfMusicBand)) {
+                } else if (!checkUniqueId(id, collectionController)) {
                     System.out.println("This id already exists. Try again");
                 } else {
                     System.out.println("Bad id. Try again");
@@ -238,20 +238,20 @@ public class CommandManager {
         }
     }
 
-    public MusicBand getNewCard(CollectionOfMusicBand collectionOfMusicBand, String[] params) {
-        CommandManager commandManager = new CommandManager();
-        Long id = commandManager.getIdFromUserToSet(collectionOfMusicBand, params);
-        String name = commandManager.getNameFromUser();
-        Double x = commandManager.getXFromUser();
-        int y = commandManager.getYFromUser();
+    public MusicBand getNewCard(CollectionController collectionController, String[] params) {
+        UtilityMethods utilityMethods = new UtilityMethods();
+        Long id = utilityMethods.getIdFromUserToSet(collectionController, params);
+        String name = utilityMethods.getNameFromUser();
+        Double x = utilityMethods.getXFromUser();
+        int y = utilityMethods.getYFromUser();
         Coordinates coordinates = new Coordinates(x, y);
         LocalDate localDate = LocalDate.now();
-        Long numberOfParticipant = commandManager.getNumberOfParticipantFromUser();
-        int singleCount = commandManager.getSingleCountFromUser();
-        Integer albumCount = commandManager.getAlbumCountFromUser();
-        MusicGenre musicGenre = commandManager.getMusicGenreFromUser();
-        String labelName = commandManager.getLabelNameFromUser();
-        int labelBands = commandManager.getSLabelBandsFromUser();
+        Long numberOfParticipant = utilityMethods.getNumberOfParticipantFromUser();
+        int singleCount = utilityMethods.getSingleCountFromUser();
+        Integer albumCount = utilityMethods.getAlbumCountFromUser();
+        MusicGenre musicGenre = utilityMethods.getMusicGenreFromUser();
+        String labelName = utilityMethods.getLabelNameFromUser();
+        int labelBands = utilityMethods.getSLabelBandsFromUser();
         Label label = new Label(labelName, labelBands);
 
         return new MusicBand.CardBuilder()

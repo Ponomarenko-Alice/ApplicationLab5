@@ -2,7 +2,7 @@ package collection;
 
 import java.util.LinkedHashMap;
 
-public class CollectionOfMusicBand {
+public class CollectionController {
 
     LinkedHashMap<Long, MusicBand> collectionOfCards = new LinkedHashMap<>();
 

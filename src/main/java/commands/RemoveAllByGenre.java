@@ -1,6 +1,6 @@
 package commands;
 
-import collection.CollectionOfMusicBand;
+import collection.CollectionController;
 import collection.MusicBand;
 import collection.MusicGenre;
 
@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class RemoveAllByGenre extends Command {
 
-    public RemoveAllByGenre(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(name, description, collectionOfMusicBand, commands, params);
+    public RemoveAllByGenre(String name, String description, CollectionController collectionController, CommandSet commands, String... params) {
+        super(name, description, collectionController, commands, params);
     }
 
     @Override
@@ -21,7 +21,7 @@ public class RemoveAllByGenre extends Command {
         } else {
             String param = Arrays.stream(params).toList().get(0);
             boolean flag = true;
-            Iterator<Map.Entry<Long, MusicBand>> iterator = collectionOfMusicBand.getCollectionOfCards().entrySet().iterator();
+            Iterator<Map.Entry<Long, MusicBand>> iterator = collectionController.getCollectionOfCards().entrySet().iterator();
             while (iterator.hasNext()) {
                 Map.Entry<Long, MusicBand> entry = iterator.next();
                 MusicGenre genre = entry.getValue().getGenre();

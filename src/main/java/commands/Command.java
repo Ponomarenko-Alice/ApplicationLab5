@@ -1,18 +1,18 @@
 package commands;
 
-import collection.CollectionOfMusicBand;
+import collection.CollectionController;
 
 public abstract class Command {
     protected String name;
     protected String description;
-    protected CollectionOfMusicBand collectionOfMusicBand;
+    protected CollectionController collectionController;
     protected CommandSet commands;
     protected String[] params;
 
-    public Command(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
+    public Command(String name, String description, CollectionController collectionController, CommandSet commands, String... params) {
         this.name = name;
         this.description = description;
-        this.collectionOfMusicBand = collectionOfMusicBand;
+        this.collectionController = collectionController;
         this.commands = commands;
         this.params = params;
     }

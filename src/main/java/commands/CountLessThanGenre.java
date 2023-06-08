@@ -1,14 +1,14 @@
 package commands;
 
-import collection.CollectionOfMusicBand;
+import collection.CollectionController;
 import collection.MusicBand;
 import collection.MusicGenre;
 import java.util.Map;
 
 
 public class CountLessThanGenre extends Command {
-    public CountLessThanGenre(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(name, description, collectionOfMusicBand, commands, params);
+    public CountLessThanGenre(String name, String description, CollectionController collectionController, CommandSet commands, String... params) {
+        super(name, description, collectionController, commands, params);
     }
 
     @Override
@@ -22,14 +22,13 @@ public class CountLessThanGenre extends Command {
                     break;
                 }
             }
-
             if (flag) {
                 System.out.println("Enter one of:");
                 new EnumExistException().offerAvailableEnums();
             } else {
 
                 int count = 0;
-                for (Map.Entry<Long, MusicBand> entry : collectionOfMusicBand.getCollectionOfCards().entrySet()) {
+                for (Map.Entry<Long, MusicBand> entry : collectionController.getCollectionOfCards().entrySet()) {
                     MusicGenre genre = entry.getValue().getGenre();
                     if (genre.name().compareTo(param) < 0) {
                         count++;

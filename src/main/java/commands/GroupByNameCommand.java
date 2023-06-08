@@ -1,13 +1,13 @@
 package commands;
 
-import collection.CollectionOfMusicBand;
+import collection.CollectionController;
 import collection.MusicBand;
 
 import java.util.*;
 
 public class GroupByNameCommand extends Command {
-    public GroupByNameCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(name, description, collectionOfMusicBand, commands, params);
+    public GroupByNameCommand(String name, String description, CollectionController collectionController, CommandSet commands, String... params) {
+        super(name, description, collectionController, commands, params);
     }
 
     @Override
@@ -15,7 +15,7 @@ public class GroupByNameCommand extends Command {
 
         Map<String, Integer> names = new HashMap<>();
 
-        for (Map.Entry<Long, MusicBand> entry : collectionOfMusicBand.getCollectionOfCards().entrySet()) {
+        for (Map.Entry<Long, MusicBand> entry : collectionController.getCollectionOfCards().entrySet()) {
             String currentCardName = entry.getValue().getName();
             if (names.containsKey(currentCardName)) {
                 int currentCount = names.get(currentCardName);

@@ -1,15 +1,15 @@
 package cmd;
 
-import collection.CollectionOfMusicBand;
+import collection.CollectionController;
 import collection.MusicBand;
 
 import java.time.Instant;
 
 public class IdGenerator {
-    CollectionOfMusicBand collection;
+    CollectionController collection;
 
-    public IdGenerator(CollectionOfMusicBand collectionOfMusicBand) {
-        this.collection = collectionOfMusicBand;
+    public IdGenerator(CollectionController collectionController) {
+        this.collection = collectionController;
     }
 
     public Long getUniqueId() {
@@ -20,9 +20,9 @@ public class IdGenerator {
         return id;
     }
 
-    private Boolean checkUniqueId(Long id, CollectionOfMusicBand collectionOfMusicBand) {
+    private Boolean checkUniqueId(Long id, CollectionController collectionController) {
         boolean flag = true;
-        for (MusicBand musicBand : collectionOfMusicBand.getCollectionOfCards().values()) {
+        for (MusicBand musicBand : collectionController.getCollectionOfCards().values()) {
             if (id.equals(musicBand.getId())) {
                 flag = false;
                 break;

@@ -1,6 +1,6 @@
 package commands;
 
-import collection.CollectionOfMusicBand;
+import collection.CollectionController;
 
 import java.util.LinkedList;
 
@@ -13,8 +13,8 @@ public class HistoryCommand extends Command {
         this.history = new LinkedList<>();
     }
 
-    public HistoryCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
-        super(name, description, collectionOfMusicBand, commands);
+    public HistoryCommand(String name, String description, CollectionController collectionController, CommandSet commands) {
+        super(name, description, collectionController, commands);
     }
 
     public void addCommandToHistory(String string) {

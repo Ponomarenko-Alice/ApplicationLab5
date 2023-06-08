@@ -1,12 +1,11 @@
 package cmd;
 
-import collection.CollectionOfMusicBand;
+import collection.CollectionController;
 import collection.MusicBand;
 import commands.Command;
 import commands.CommandSet;
 import commands.ExitException;
 import commands.HistoryCommand;
-
 import java.io.*;
 import java.util.Scanner;
 
@@ -15,21 +14,20 @@ import static org.apache.commons.lang3.ArrayUtils.remove;
 public class Executor {
     private final InputStream input;
     private final File file;
-    private final CollectionOfMusicBand collectionOfMusicBand;
+    private final CollectionController collectionController;
     CommandSet commandSet;
 
 
-    public Executor(InputStream inputStream, CollectionOfMusicBand collectionOfMusicBand, File file) {
+    public Executor(InputStream inputStream, CollectionController collectionController, File file) {
         this.input = inputStream;
-        this.collectionOfMusicBand = collectionOfMusicBand;
+        this.collectionController = collectionController;
         this.file = file;
     }
-
 
     private void fillCollectionMusicBand() {
         ParserCSV parser = new ParserCSV(file);
         for (MusicBand musicBand : parser.getListCollection()) {
-            collectionOfMusicBand.addMusicBand(musicBand.getId(), musicBand);
+            collectionController.addMusicBand(musicBand.getId(), musicBand);
         }
     }
 
@@ -39,7 +37,6 @@ public class Executor {
 
     public void executeLine(String line, CommandSet commandSet) throws ExitException {
         try {
-
             String[] tokens = line.trim().split("\\s+");
             Command command = commandSet.getCommandSet().get(tokens[0]);
             String[] params = remove(tokens, 0);
@@ -64,10 +61,10 @@ public class Executor {
 
     public void start() {
         this.fillCollectionMusicBand();
-        this.commandSet = new CommandSet(this.collectionOfMusicBand);
+        this.commandSet = new CommandSet(this.collectionController);
 
         Scanner scanner = new Scanner(input);
-        this.commandSet = new CommandSet(this.collectionOfMusicBand);
+        this.commandSet = new CommandSet(this.collectionController);
 
 
         while (scanner.hasNextLine()) {

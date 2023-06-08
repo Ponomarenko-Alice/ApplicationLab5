@@ -1,14 +1,14 @@
 package commands;
 
-import collection.CollectionOfMusicBand;
+import collection.CollectionController;
 
 import java.util.Map;
 
 public class HelpCommand extends Command {
 
 
-    public HelpCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(name, description, collectionOfMusicBand, commands, params);
+    public HelpCommand(String name, String description, CollectionController collectionController, CommandSet commands, String... params) {
+        super(name, description, collectionController, commands, params);
     }
 
     @Override

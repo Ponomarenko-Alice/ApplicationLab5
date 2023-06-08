@@ -1,14 +1,14 @@
 package commands;
 
-import collection.CollectionOfMusicBand;
+import collection.CollectionController;
 
 import java.util.Arrays;
 
 
 public class RemoveLowerKeyCommand extends Command {
 
-    public RemoveLowerKeyCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(name, description, collectionOfMusicBand, commands, params);
+    public RemoveLowerKeyCommand(String name, String description, CollectionController collectionController, CommandSet commands, String... params) {
+        super(name, description, collectionController, commands, params);
     }
 
     @Override
@@ -19,10 +19,10 @@ public class RemoveLowerKeyCommand extends Command {
             String param = Arrays.stream(params).toList().get(0);
             try {
                 Integer number = Integer.parseInt(param);
-                Long[] keys = collectionOfMusicBand.getCollectionOfCards().keySet().stream().toList().toArray(new Long[0]);
+                Long[] keys = collectionController.getCollectionOfCards().keySet().stream().toList().toArray(new Long[0]);
                 for (Long key : keys) {
                     if (key < number) {
-                        collectionOfMusicBand.getCollectionOfCards().remove(key);
+                        collectionController.getCollectionOfCards().remove(key);
                         System.out.println("Card (id = " + key + ") removed.");
                     }
                 }

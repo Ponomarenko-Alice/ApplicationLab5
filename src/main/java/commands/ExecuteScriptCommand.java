@@ -1,15 +1,15 @@
 package commands;
 
 import cmd.Executor;
-import collection.CollectionOfMusicBand;
+import collection.CollectionController;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 
 public class ExecuteScriptCommand extends Command {
-    public ExecuteScriptCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(name, description, collectionOfMusicBand, commands, params);
+    public ExecuteScriptCommand(String name, String description, CollectionController collectionController, CommandSet commands, String... params) {
+        super(name, description, collectionController, commands, params);
     }
 
     @Override
@@ -17,7 +17,7 @@ public class ExecuteScriptCommand extends Command {
 
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(Arrays.stream(params).toList().get(0)))) {
             String line;
-            Executor executor = new Executor(null, collectionOfMusicBand, null);
+            Executor executor = new Executor(null, collectionController, null);
             while ((line = bufferedReader.readLine()) != null) {
                 System.out.println(line);
                 executor.executeLine(line, executor.getCommandSet());

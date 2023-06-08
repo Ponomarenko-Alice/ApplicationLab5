@@ -5,9 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Refactoring">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/collection/MusicGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/MusicGenre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/UtilityMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/Executor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/IdGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/IdGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/Invoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/Invoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collection/CollectionOfMusicBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/CollectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CountLessThanGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CountLessThanGenre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/GroupByNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/GroupByNameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/HistoryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/HistoryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveAllByGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveAllByGenre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveGreaterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveKeyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveKeyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveLowerKeyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveLowerKeyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/SaveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ShowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/UpdateIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/UpdateIdCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +74,11 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alicc\IdeaProjects\ApplicationLab5\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alicc\IdeaProjects\ApplicationLab5\src\main\java" />
+      <recent name="C:\Users\alicc\IdeaProjects\ApplicationLab5\src\main\java\cmd" />
+      <recent name="C:\Users\alicc\IdeaProjects\ApplicationLab5\src\main\java\commands" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -502,6 +530,26 @@
           <properties class="java.lang.ClassNotFoundException" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cmd/Executor.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cmd/Executor.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

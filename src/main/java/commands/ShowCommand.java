@@ -1,19 +1,19 @@
 package commands;
 
-import collection.CollectionOfMusicBand;
+import collection.CollectionController;
 import collection.MusicBand;
 
 
 public class ShowCommand extends Command {
 
-    public ShowCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
-        super(name, description, collectionOfMusicBand, commands);
+    public ShowCommand(String name, String description, CollectionController collectionController, CommandSet commands) {
+        super(name, description, collectionController, commands);
     }
 
     @Override
     public void execute() {
-        if (collectionOfMusicBand.getNumberOfCardsOfCards() > 0) {
-            for (MusicBand value : collectionOfMusicBand.getCollectionOfCards().values()) {
+        if (collectionController.getNumberOfCardsOfCards() > 0) {
+            for (MusicBand value : collectionController.getCollectionOfCards().values()) {
                 System.out.println("ID: " + value.getId());
                 System.out.println("Name: " + value.getName());
 //            System.out.println("coordinates.X: " + value.getCoordinates().getX());

@@ -1,10 +1,10 @@
 package commands;
 
-import collection.CollectionOfMusicBand;
+import collection.CollectionController;
 
 public class ExitCommand extends Command {
-    public ExitCommand(String name, String description, CollectionOfMusicBand collectionOfMusicBand, CommandSet commands, String... params) {
-        super(name, description, collectionOfMusicBand, commands, params);
+    public ExitCommand(String name, String description, CollectionController collectionController, CommandSet commands, String... params) {
+        super(name, description, collectionController, commands, params);
     }
 
     @Override

@@ -1,7 +1,7 @@
 package commands;
 
 import cmd.WriterCSV;
-import collection.CollectionOfMusicBand;
+import collection.CollectionController;
 import collection.MusicBand;
 
 import java.io.IOException;
@@ -12,15 +12,15 @@ import java.util.List;
 public class SaveCommand extends Command {
     private List<String[]> stringFieldsList;
 
-    public SaveCommand(String name, String description,CollectionOfMusicBand collectionOfMusicBand, CommandSet commands) {
-        super(name, description, collectionOfMusicBand, commands);
+    public SaveCommand(String name, String description, CollectionController collectionController, CommandSet commands) {
+        super(name, description, collectionController, commands);
     }
 
 
     {
         List<String[]> stringListCollection = new ArrayList<>();
         try {
-            for (MusicBand card : collectionOfMusicBand.getCollectionOfCards().values()) {
+            for (MusicBand card : collectionController.getCollectionOfCards().values()) {
                 String[] stringCardList = new String[11];
 
                 stringCardList[0] = card.getId().toString();
@@ -36,7 +36,6 @@ public class SaveCommand extends Command {
 //                stringCardList[9] = card.getLabel().getName();
 ////              Integer b = card.getLabel().getBands();
 ////              stringCardList[10] = b.toString();
-
 
                 stringListCollection.add(stringCardList);
             }
