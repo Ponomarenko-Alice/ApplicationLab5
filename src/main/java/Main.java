@@ -10,5 +10,6 @@ public class Main {
         CollectionController collectionController = new CollectionController();
         Executor executor = new Executor(System.in, collectionController, fileTest);
         executor.start();
+
     }
 }

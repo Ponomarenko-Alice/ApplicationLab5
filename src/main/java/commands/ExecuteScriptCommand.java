@@ -1,6 +1,6 @@
 package commands;
 
-import cmd.Executor;
+import cmd.LineExecutor;
 import collection.CollectionController;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -17,10 +17,10 @@ public class ExecuteScriptCommand extends Command {
 
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(Arrays.stream(params).toList().get(0)))) {
             String line;
-            Executor executor = new Executor(null, collectionController, null);
+            LineExecutor lineExecutor = new LineExecutor();
             while ((line = bufferedReader.readLine()) != null) {
                 System.out.println(line);
-                executor.executeLine(line, executor.getCommandSet());
+                lineExecutor.executeLine(line, commands);
             }
         } catch (IOException e) {
             System.out.println("File read error. Try different");
