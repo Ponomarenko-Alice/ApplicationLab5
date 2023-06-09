@@ -33,7 +33,7 @@ public abstract class Command {
         return "-" + "'" + this.getName() + "'" + this.getDescription();
     }
 
-    public abstract  void execute() throws ExitException;
+    public abstract  void execute() throws ExitException, RecursionScriptException;
 
     public String getName() {
         return name;

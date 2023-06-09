@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Rename classes">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Put executeLine method to a new ExecuteLine class (for call from ExecuteScriptCommand) &#10;-make field commandSet in the Executor private&#10;-remove getCommandSet method from Executor&#10;-field commandSet converted to local variable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/script.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cmd/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/Executor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/LineExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/LineExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,13 +95,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676462150884</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Rename Invoker method">
-      <created>1681210555425</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1681210555425</updated>
     </task>
     <task id="LOCAL-00005" summary="Rename Invoker method">
       <created>1681210577795</created>
@@ -437,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686251064119</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Put executeLine method to a new ExecuteLine class (for call from ExecuteScriptCommand) &#10;-make field commandSet in the Executor private&#10;-remove getCommandSet method from Executor&#10;-field commandSet converted to local variable">
+      <created>1686254001021</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1686254001021</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -475,9 +477,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add remove command" />
-    <MESSAGE value="Add RemoveLowerCommand" />
-    <MESSAGE value="Add RemoveGreaterCommand" />
     <MESSAGE value="Add functional for an enum field in collection" />
     <MESSAGE value="Add RemoveAllByGenre class" />
     <MESSAGE value="Refactoring CommandManager class&#10;-delete repeated creation Scanner" />
@@ -500,7 +499,10 @@
     <MESSAGE value="params[0] instead Arrays.stream(params).toList().get(0)" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Rename classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename classes" />
+    <MESSAGE value="Put executeLine method to a new ExecuteLine class (for call from ExecuteScriptCommand) &#10;-make field commandSet in the Executor private" />
+    <MESSAGE value="Put executeLine method to a new ExecuteLine class (for call from ExecuteScriptCommand) &#10;-make field commandSet in the Executor private&#10;-remove getCommandSet method from Executor" />
+    <MESSAGE value="Put executeLine method to a new ExecuteLine class (for call from ExecuteScriptCommand) &#10;-make field commandSet in the Executor private&#10;-remove getCommandSet method from Executor&#10;-field commandSet converted to local variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Put executeLine method to a new ExecuteLine class (for call from ExecuteScriptCommand) &#10;-make field commandSet in the Executor private&#10;-remove getCommandSet method from Executor&#10;-field commandSet converted to local variable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -509,11 +511,43 @@
           <properties class="java.lang.ClassNotFoundException" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/cmd/Executor.java</url>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/Command.java</url>
+          <line>35</line>
+          <properties class="commands.Command" method="execute">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java</url>
           <line>17</line>
-          <properties field="commandSet" class="cmd.Executor" />
-          <option name="timeStamp" value="15" />
+          <properties class="commands.ExecuteScriptCommand" method="execute">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cmd/LineExecutor.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cmd/LineExecutor.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
