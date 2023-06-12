@@ -23,6 +23,8 @@ public class WriterCSV {
         for (String[] line : list) {
             csvWriter.writeNext(line);
         }
+        csvWriter.flush();
+        fileWriter.flush();
         csvWriter.close();
         fileWriter.close();
     }

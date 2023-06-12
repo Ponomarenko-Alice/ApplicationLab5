@@ -18,7 +18,7 @@ public class InsertCommand extends Command {
         CommandUtils commandUtils = new CommandUtils();
         MusicBand musicBand = commandUtils.getNewCard(collectionController, params);
         collectionController.addMusicBand(musicBand.getId(), musicBand);
-        String message = ResourceBundle.getBundle("notification").getString("cardDone");
+        String message = ResourceBundle.getBundle("notifications").getString("cardDone");
         System.out.println(message);
     }
 }

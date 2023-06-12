@@ -1,14 +1,17 @@
+import cmd.FileManager;
 import collection.CollectionController;
 import cmd.Executor;
-
-import java.io.File;
+import exceptions.ExitException;
 
 public class Main {
     public static void main(String[] args) {
-//      File file = new File(args[0]);
-        File fileTest = new File("C:\\Users\\alicc\\IdeaProjects\\ApplicationLab5\\collection.csv");
+        FileManager fileManager = new FileManager();
         CollectionController collectionController = new CollectionController();
-        Executor executor = Executor.init(System.in, collectionController, fileTest);
-        executor.start();
+        try {
+            Executor executor = Executor.init(System.in, collectionController, fileManager.getFile());
+            executor.start();
+        } catch (ExitException | NullPointerException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

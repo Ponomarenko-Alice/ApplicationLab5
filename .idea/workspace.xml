@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ApplicationLab5:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add localisation">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add output information about the day of last initialization of file with collection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/Executor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/ParserCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/ParserCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/WriterCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/WriterCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/SaveCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +49,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/alicc/Downloads/commons-collections4-4.1.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -93,13 +100,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676462150884</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Refactoring HelpCommand and InfoCommand classes&#10;-realisation of HelpCommand and InfoCommand classes&#10;-added methods to CollectionOfMusicBand class">
-      <created>1681233772637</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1681233772637</updated>
     </task>
     <task id="LOCAL-00008" summary="Attempt to create Executor">
       <created>1681239216837</created>
@@ -437,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686568360689</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Add output information about the day of last initialization of file with collection">
+      <created>1686569072764</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1686569072764</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -475,7 +482,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactoring CommandManager class&#10;-delete repeated creation Scanner" />
     <MESSAGE value="Add GroupByNameCommand" />
     <MESSAGE value="Add CountLessThanGenre class" />
     <MESSAGE value="Add UpdateIdClass class" />
@@ -500,7 +506,8 @@
     <MESSAGE value="Put executeLine method to a new ExecuteLine class (for call from ExecuteScriptCommand) &#10;-make field commandSet in the Executor private&#10;-remove getCommandSet method from Executor&#10;-field commandSet converted to local variable" />
     <MESSAGE value="Add RecursionScriptException&#10;-make class Executor singletone!" />
     <MESSAGE value="Add localisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add localisation" />
+    <MESSAGE value="Add output information about the day of last initialization of file with collection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add output information about the day of last initialization of file with collection" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -509,15 +516,6 @@
           <properties class="java.lang.ClassNotFoundException" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/commands/Command.java</url>
-          <line>37</line>
-          <properties class="commands.Command" method="execute">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

@@ -18,7 +18,6 @@ public class ParserCSV {
     public List<MusicBand> getListCollection() {
         try (FileInputStream fileInputStream = new FileInputStream(file)) {
 
-
             try (BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream)) {
 
                 ColumnPositionMappingStrategy<MusicBand> musicBandStrategy = new ColumnPositionMappingStrategy<>();

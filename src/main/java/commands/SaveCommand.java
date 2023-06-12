@@ -51,7 +51,7 @@ public class SaveCommand extends Command {
         try {
             WriterCSV writerCSV = new WriterCSV("out.csv", stringFieldsList);
             writerCSV.writeToFile();
-            String message = ResourceBundle.getBundle("notification").getString("successSave");
+            String message = ResourceBundle.getBundle("notifications").getString("successSave");
             System.out.println(message + writerCSV.getFileName());
         } catch (IOException e) {
             System.out.println("File not found");
