@@ -3,6 +3,7 @@ package commands;
 import collection.CollectionController;
 
 import java.util.Arrays;
+import java.util.ResourceBundle;
 
 
 public class RemoveLowerKeyCommand extends Command {
@@ -27,8 +28,8 @@ public class RemoveLowerKeyCommand extends Command {
                     }
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Param format must be int");
-            }
+                String message = ResourceBundle.getBundle("warnings").getString("intFormat");
+                System.out.println(message);                }
         }
     }
 }

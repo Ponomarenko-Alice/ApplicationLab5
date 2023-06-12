@@ -3,6 +3,7 @@ package commands;
 import collection.CollectionController;
 
 import java.util.Arrays;
+import java.util.ResourceBundle;
 
 public class RemoveGreaterCommand extends Command {
     public RemoveGreaterCommand(String name, String description, CollectionController collectionController, CommandSet commands, String... params) {
@@ -25,8 +26,8 @@ public class RemoveGreaterCommand extends Command {
                     }
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Param format must be int");
-            }
+                String message = ResourceBundle.getBundle("warnings").getString("intFormat");
+                System.out.println(message);            }
         }
     }
 }

@@ -1,7 +1,7 @@
 package cmd;
 
 import collection.*;
-import commands.EnumExistException;
+import exceptions.EnumExistException;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;
@@ -9,10 +9,10 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class UtilityMethods {
+public class CommandUtils {
     Scanner in;
 
-    public UtilityMethods() {
+    public CommandUtils() {
         this.in = new Scanner(System.in);
     }
 
@@ -239,19 +239,19 @@ public class UtilityMethods {
     }
 
     public MusicBand getNewCard(CollectionController collectionController, String[] params) {
-        UtilityMethods utilityMethods = new UtilityMethods();
-        Long id = utilityMethods.getIdFromUserToSet(collectionController, params);
-        String name = utilityMethods.getNameFromUser();
-        Double x = utilityMethods.getXFromUser();
-        int y = utilityMethods.getYFromUser();
+        CommandUtils commandUtils = new CommandUtils();
+        Long id = commandUtils.getIdFromUserToSet(collectionController, params);
+        String name = commandUtils.getNameFromUser();
+        Double x = commandUtils.getXFromUser();
+        int y = commandUtils.getYFromUser();
         Coordinates coordinates = new Coordinates(x, y);
         LocalDate localDate = LocalDate.now();
-        Long numberOfParticipant = utilityMethods.getNumberOfParticipantFromUser();
-        int singleCount = utilityMethods.getSingleCountFromUser();
-        Integer albumCount = utilityMethods.getAlbumCountFromUser();
-        MusicGenre musicGenre = utilityMethods.getMusicGenreFromUser();
-        String labelName = utilityMethods.getLabelNameFromUser();
-        int labelBands = utilityMethods.getSLabelBandsFromUser();
+        Long numberOfParticipant = commandUtils.getNumberOfParticipantFromUser();
+        int singleCount = commandUtils.getSingleCountFromUser();
+        Integer albumCount = commandUtils.getAlbumCountFromUser();
+        MusicGenre musicGenre = commandUtils.getMusicGenreFromUser();
+        String labelName = commandUtils.getLabelNameFromUser();
+        int labelBands = commandUtils.getSLabelBandsFromUser();
         Label label = new Label(labelName, labelBands);
 
         return new MusicBand.CardBuilder()

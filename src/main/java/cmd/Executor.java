@@ -3,8 +3,8 @@ package cmd;
 import collection.CollectionController;
 import collection.MusicBand;
 import commands.CommandSet;
-import commands.ExitException;
-import commands.RecursionScriptException;
+import exceptions.ExitException;
+import exceptions.RecursionScriptException;
 
 import java.io.*;
 import java.util.Scanner;
@@ -45,9 +45,13 @@ public class Executor {
         }
     }
 
-    public int getRecursionLevel() {return recursionLevel;}
-    public void increaseRecursionLevel() {recursionLevel++;}
+    public int getRecursionLevel() {
+        return recursionLevel;
+    }
 
+    public void increaseRecursionLevel() {
+        recursionLevel++;
+    }
 
     public void start() {
         this.fillCollectionMusicBand();
@@ -59,6 +63,7 @@ public class Executor {
                 String line = scanner.nextLine();
                 lineExecutor.executeLine(line, commandSet);
             } catch (ExitException e) {
+                System.out.println(e.getMessage());
                 break;
             } catch (RecursionScriptException e) {
                 System.out.println(e.getMessage());

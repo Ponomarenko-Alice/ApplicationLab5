@@ -1,11 +1,10 @@
-package commands;
+package exceptions;
 
 import collection.MusicGenre;
 
 public class EnumExistException extends Exception {
     public EnumExistException() {
     }
-
 
     public void offerAvailableEnums() {
         Integer number = 1;
@@ -14,5 +13,4 @@ public class EnumExistException extends Exception {
             number++;
         }
     }
-
 }

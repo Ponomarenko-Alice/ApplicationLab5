@@ -36,8 +36,7 @@ public class ParserCSV {
                 return cb.parse();
 
             } catch (FileNotFoundException e) {
-                e.printStackTrace();
-                System.out.println("File not found ");
+                System.out.println("File not found");
             }
 
         } catch (IOException e) {

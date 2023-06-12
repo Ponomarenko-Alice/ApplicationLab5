@@ -1,8 +1,10 @@
 package commands;
 
-import cmd.UtilityMethods;
+import cmd.CommandUtils;
 import collection.CollectionController;
 import collection.MusicBand;
+
+import java.util.ResourceBundle;
 
 
 public class InsertCommand extends Command {
@@ -13,9 +15,10 @@ public class InsertCommand extends Command {
 
     @Override
     public void execute() {
-        UtilityMethods utilityMethods = new UtilityMethods();
-        MusicBand musicBand = utilityMethods.getNewCard(collectionController, params);
+        CommandUtils commandUtils = new CommandUtils();
+        MusicBand musicBand = commandUtils.getNewCard(collectionController, params);
         collectionController.addMusicBand(musicBand.getId(), musicBand);
-        System.out.println("Card done! Don't forget to save collection :)");
+        String message = ResourceBundle.getBundle("notification").getString("cardDone");
+        System.out.println(message);
     }
 }

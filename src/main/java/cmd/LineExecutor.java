@@ -1,6 +1,10 @@
 package cmd;
 
 import commands.*;
+import exceptions.ExitException;
+import exceptions.RecursionScriptException;
+
+import java.util.ResourceBundle;
 
 import static org.apache.commons.lang3.ArrayUtils.remove;
 
@@ -9,7 +13,7 @@ public class LineExecutor {
     public LineExecutor() {
     }
 
-    public void executeLine(String line, CommandSet commandSet) throws ExitException, RecursionScriptException {
+    public void executeLine(final String line, final CommandSet commandSet) throws ExitException, RecursionScriptException {
         try {
             String[] tokens = line.trim().split("\\s+");
             Command command = commandSet.getCommandSet().get(tokens[0]);
@@ -18,10 +22,12 @@ public class LineExecutor {
                 command.setParams(params);
             }
             if (command instanceof ExecuteScriptCommand) {
-                System.out.println(Executor.getInstance().getRecursionLevel());
-                Executor.getInstance().increaseRecursionLevel();
-                if (Executor.getInstance().getRecursionLevel() > 1) {
-                    throw new RecursionScriptException("Recursion. File has execute_script command."); }
+                Executor executor = Executor.getInstance();
+                executor.increaseRecursionLevel();
+                if (executor.getRecursionLevel() > 1) {
+                    String message = ResourceBundle.getBundle("warnings").getString("recursion");
+                    throw new RecursionScriptException(message);
+                }
             }
             command.execute();
 
@@ -33,13 +39,13 @@ public class LineExecutor {
             historyCommand.addCommandToHistory(tokens[0]);
 
         } catch (NullPointerException e) {
-            System.out.println("Non-existed command. Try 'help' command for available commands.");
+            String message = ResourceBundle.getBundle("warnings").getString("nonExistedCommand");
+            System.out.println(message);
         } catch (ExitException e) {
-            throw new ExitException("bye");
+            throw new ExitException("Bye :з");
         } catch (RecursionScriptException e) {
-            throw new RecursionScriptException("Recursion. File has execute_script command.");
+            String message = ResourceBundle.getBundle("warnings").getString("recursion");
+            throw new RecursionScriptException(message);
         }
     }
-
-
 }

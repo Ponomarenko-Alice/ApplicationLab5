@@ -1,6 +1,8 @@
 package commands;
 
 import collection.CollectionController;
+import exceptions.ExitException;
+import exceptions.RecursionScriptException;
 
 public abstract class Command {
     protected String name;

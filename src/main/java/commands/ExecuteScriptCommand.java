@@ -2,11 +2,14 @@ package commands;
 
 import cmd.LineExecutor;
 import collection.CollectionController;
+import exceptions.ExitException;
+import exceptions.RecursionScriptException;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.ResourceBundle;
 
 public class ExecuteScriptCommand extends Command {
 
@@ -25,11 +28,13 @@ public class ExecuteScriptCommand extends Command {
                 lineExecutor.executeLine(line, commands);
             }
         } catch (IOException e) {
-            System.out.println("File read error. Try different");
+            String message = ResourceBundle.getBundle("warnings").getString("IOException");
+            System.out.println(message);
         } catch (IndexOutOfBoundsException e) {
             System.out.println("No file enter");
         } catch (RecursionScriptException e) {
-            throw new RecursionScriptException("Recursion. File has execute_script command.");
+            String message = ResourceBundle.getBundle("warnings").getString("nonExistedCommand");
+            throw new RecursionScriptException(message);
         }
     }
 }

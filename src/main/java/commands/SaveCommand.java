@@ -7,6 +7,7 @@ import collection.MusicBand;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 
 public class SaveCommand extends Command {
@@ -50,7 +51,8 @@ public class SaveCommand extends Command {
         try {
             WriterCSV writerCSV = new WriterCSV("out.csv", stringFieldsList);
             writerCSV.writeToFile();
-            System.out.println("The collection was saved successfully to file " + writerCSV.getFileName());
+            String message = ResourceBundle.getBundle("notification").getString("successSave");
+            System.out.println(message + writerCSV.getFileName());
         } catch (IOException e) {
             System.out.println("File not found");
         }

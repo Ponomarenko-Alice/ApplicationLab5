@@ -3,10 +3,12 @@ package commands;
 import collection.CollectionController;
 import collection.MusicBand;
 import collection.MusicGenre;
+import exceptions.EnumExistException;
 
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.ResourceBundle;
 
 public class RemoveAllByGenre extends Command {
 
@@ -17,7 +19,8 @@ public class RemoveAllByGenre extends Command {
     @Override
     public void execute() {
         if (params == null || params.length == 0) {
-            System.out.println("No param. Enter one of 'PSYCHEDELIC_CLOUD_RAP', 'SOUL', 'POST_PUNK'");
+            System.out.println("No param. ");
+            new EnumExistException().offerAvailableEnums();
         } else {
             String param = Arrays.stream(params).toList().get(0);
             boolean flag = true;
@@ -32,7 +35,8 @@ public class RemoveAllByGenre extends Command {
                 }
             }
             if (flag) {
-                System.out.println("No card with this genre in collection");
+                String message = ResourceBundle.getBundle("warnings").getString("noCardWithGenre");
+                System.out.println(message);
             }
         }
     }

@@ -2,6 +2,8 @@ package commands;
 
 import collection.CollectionController;
 
+import java.util.ResourceBundle;
+
 public class ClearCommand extends Command {
 
     public ClearCommand(String name, String description, CollectionController collectionController, CommandSet commandSet, String... params) {
@@ -11,10 +13,12 @@ public class ClearCommand extends Command {
     @Override
     public void execute() {
         if (collectionController.getNumberOfCardsOfCards() == 0) {
-            System.out.println("Collection is already empty");
+            String message = ResourceBundle.getBundle("notifications").getString("alreadyEmptyCollection");
+            System.out.println(message);
         } else {
             collectionController.getCollectionOfCards().clear();
-            System.out.println("Collection is empty now");
+            String message = ResourceBundle.getBundle("notifications").getString("emptyNow");
+            System.out.println(message);
         }
     }
 }

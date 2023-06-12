@@ -3,6 +3,8 @@ package commands;
 import collection.CollectionController;
 import collection.MusicBand;
 import collection.MusicGenre;
+import exceptions.EnumExistException;
+
 import java.util.Map;
 
 

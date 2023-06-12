@@ -1,6 +1,7 @@
 package commands;
 
 import collection.CollectionController;
+import exceptions.ExitException;
 
 public class ExitCommand extends Command {
     public ExitCommand(String name, String description, CollectionController collectionController, CommandSet commands, String... params) {
@@ -9,7 +10,6 @@ public class ExitCommand extends Command {
 
     @Override
     public void execute() throws ExitException {
-        System.out.println("Bye :З");
         throw new ExitException("Bye :З");
     }
 }
