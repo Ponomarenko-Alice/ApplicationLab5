@@ -30,6 +30,10 @@ public class Executor {
         return INSTANCE;
     }
 
+    public File getFile() {
+        return file;
+    }
+
     public static Executor init(InputStream inputStream, CollectionController collectionController, File file) {
         if (INSTANCE != null) {
             throw new AssertionError("You already initialized Executor");

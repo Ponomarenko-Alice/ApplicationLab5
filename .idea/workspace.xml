@@ -5,29 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add localisation">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/notifications.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/warnings.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cmd/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/Executor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/LineExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/LineExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/ParserCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/ParserCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/UtilityMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/CommandUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/WriterCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/WriterCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ClearCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CountLessThanGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CountLessThanGenre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/EnumExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/EnumExistException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ExecuteScriptCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ExitCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ExitException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/ExitException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RecursionScriptException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/RecursionScriptException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveAllByGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveAllByGenre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveGreaterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/RemoveLowerKeyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/RemoveLowerKeyCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/SaveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/UpdateIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/UpdateIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InfoCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,13 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676462150884</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Refactoring HelpCommand and CollectionOfMusicBand&#10;-added method to CollectionOfMusicBand&#10;-added realization to HelpCommand">
-      <created>1681230537835</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1681230537835</updated>
     </task>
     <task id="LOCAL-00007" summary="Refactoring HelpCommand and InfoCommand classes&#10;-realisation of HelpCommand and InfoCommand classes&#10;-added methods to CollectionOfMusicBand class">
       <created>1681233772637</created>
@@ -456,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686305429447</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Add localisation">
+      <created>1686568360689</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1686568360689</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
