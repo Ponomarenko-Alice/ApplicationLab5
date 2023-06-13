@@ -9,13 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Add output information about the day of last initialization of file with collection">
+    <list default="true" id="36bd35d5-ba57-4d83-870e-60c98a628590" name="Changes" comment="Jar file and manifest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/script.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/Executor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/LineExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/LineExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cmd/ParserCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/ParserCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmd/WriterCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cmd/WriterCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/InsertCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collection/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collection/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CommandSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/SaveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ShowCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,20 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676462150884</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Attempt to create Executor">
-      <created>1681239216837</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1681239216837</updated>
-    </task>
-    <task id="LOCAL-00009" summary="-">
-      <created>1681749258512</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1681749258512</updated>
     </task>
     <task id="LOCAL-00010" summary="Problem with Parsing">
       <created>1682087526143</created>
@@ -444,7 +435,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686569072764</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Add reading file path from environment variable&#10;-add FileManager class">
+      <created>1686601246399</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1686601246399</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Jar file and manifest">
+      <created>1686601311258</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1686601311258</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -482,8 +487,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add GroupByNameCommand" />
-    <MESSAGE value="Add CountLessThanGenre class" />
     <MESSAGE value="Add UpdateIdClass class" />
     <MESSAGE value="Add exit command class" />
     <MESSAGE value="Move the method executeLine to a separate" />
@@ -507,7 +510,9 @@
     <MESSAGE value="Add RecursionScriptException&#10;-make class Executor singletone!" />
     <MESSAGE value="Add localisation" />
     <MESSAGE value="Add output information about the day of last initialization of file with collection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add output information about the day of last initialization of file with collection" />
+    <MESSAGE value="Add reading file path from environment variable&#10;-add FileManager class" />
+    <MESSAGE value="Jar file and manifest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jar file and manifest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -516,10 +521,54 @@
           <properties class="java.lang.ClassNotFoundException" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/SaveCommand.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/SaveCommand.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/collection/Coordinates.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/collection/MusicBand.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cmd/ParserCSV.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/collection/Coordinates.java</url>
+          <line>13</line>
+          <properties class="collection.Coordinates" method="getX">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/collection/MusicBand.java</url>
+          <line>29</line>
+          <properties class="collection.MusicBand" method="getCoordinates">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="collection.MusicBand" memberName="coordinates" />
         <PinnedItemInfo parentTag="collection.CollectionOfMusicBand" memberName="collectionOfCards" />
       </pinned-members>
     </pin-to-top-manager>

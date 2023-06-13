@@ -27,7 +27,7 @@ public class SaveCommand extends Command {
                 stringCardList[0] = card.getId().toString();
                 stringCardList[1] = card.getName();
 //                stringCardList[2] = card.getCoordinates().getX().toString();
-//                stringCardList[3] = card.getCoordinates().getY().toString();
+//                stringCardList[3] = ((Integer)card.getCoordinates().getY()).toString();
                 stringCardList[4] = card.getCreationDate().toString();
                 stringCardList[5] = card.getNumberOfParticipants().toString();
                 Integer a = card.getSinglesCount();

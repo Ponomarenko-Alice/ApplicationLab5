@@ -25,7 +25,6 @@ public class CommandSet {
         commands.put("remove_all_by_genre", new RemoveAllByGenre("remove_all_by_genre", " delete a collection item by its genre", collectionController, this));
         commands.put("count_less_than_genre", new CountLessThanGenre("count_less_than_genre", " count cards, where genre less than given ", collectionController, this));
         commands.put("group_counting_by_name", new GroupByNameCommand("group_counting_by_name", " group cards by name and shows the number in each of them ", collectionController, this));
-
     }
 
     public LinkedHashMap<String, Command> getCommandSet() {

@@ -21,15 +21,18 @@ public class LineExecutor {
             if (params.length != 0) {
                 command.setParams(params);
             }
+            Executor executor = Executor.getInstance();
             if (command instanceof ExecuteScriptCommand) {
-                Executor executor = Executor.getInstance();
                 executor.increaseRecursionLevel();
                 if (executor.getRecursionLevel() > 1) {
                     String message = ResourceBundle.getBundle("warnings").getString("recursion");
                     throw new RecursionScriptException(message);
                 }
+                command.execute();
+                executor.decreaseRecursionLevel();
+            } else {
+                command.execute();
             }
-            command.execute();
 
             HistoryCommand historyCommand = commandSet.getCommandSet().values().stream()
                     .filter(x -> x instanceof HistoryCommand)

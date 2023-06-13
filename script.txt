@@ -2,4 +2,3 @@ help
 info
 clear
 save
-execute_script script.txt

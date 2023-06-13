@@ -57,6 +57,10 @@ public class Executor {
         recursionLevel++;
     }
 
+    public void decreaseRecursionLevel() {
+        recursionLevel--;
+    }
+
     public void start() {
         this.fillCollectionMusicBand();
         CommandSet commandSet = new CommandSet(this.collectionController);

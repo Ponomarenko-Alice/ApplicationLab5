@@ -22,7 +22,7 @@ public class ParserCSV {
 
                 ColumnPositionMappingStrategy<MusicBand> musicBandStrategy = new ColumnPositionMappingStrategy<>();
                 musicBandStrategy.setType(MusicBand.class);
-                musicBandStrategy.setColumnMapping("id", "name", "coordinates.x", "coordinates.y", "creationDate", "numberOfParticipants",
+                musicBandStrategy.setColumnMapping("id", "name", "coordinates.X", "coordinates.Y", "creationDate", "numberOfParticipants",
                         "singlesCount", "albumsCount", "genre", "label.name", "label.bands");
 
                 CsvToBean<MusicBand> cb = new CsvToBeanBuilder<MusicBand>(new BufferedReader(new InputStreamReader(bufferedInputStream)))
@@ -33,6 +33,7 @@ public class ParserCSV {
                         .withIgnoreLeadingWhiteSpace(true)
                         .build();
                 return cb.parse();
+
 
             } catch (FileNotFoundException e) {
                 System.out.println("File not found");
